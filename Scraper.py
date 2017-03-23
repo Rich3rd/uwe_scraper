@@ -46,6 +46,6 @@ session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabActio
 #response = requests.get('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1',cookies=session.cookies)
 session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'))
 
-
+#Added comment for testing
 soup = BeautifulSoup(session.body(),'html.parser')
 print(soup)
