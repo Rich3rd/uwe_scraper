@@ -38,14 +38,12 @@ password.set('vellapushFare19')
 # Push the button
 name.form().submit()
 session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')
-#print(session.text)
-#print(session.cookies)
-#headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
-#response = requests.get('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_19_1',cookies=session.cookies,headers=headers)
-#response = requests.get('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1',cookies=session.cookies)
 session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'))
 
 #Added comment for testing
 soup = BeautifulSoup(session.body(),'html.parser')
 print(soup)
+file = open('html text.html', 'w')
+file.write(str(soup))
+file.close()
