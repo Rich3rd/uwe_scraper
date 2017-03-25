@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<!-- webapps\blackboard\web\announcements\announcement_manager.jsp --><html lang="en-GB-UWE"><head>
+<title>Announcements – UFCFM6-15-3 - Requirements engineering ...</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="GET" id="request-method" name="request-method">
+<meta content="Blackboard" name="author">
+<meta content="© 1997-2017 Blackboard Inc. All Rights Reserved. US Patent No. 7,493,396 and 7,558,853. Additional Patents Pending." name="copyright">
+<meta content="Blackboard" name="keywords">
+<meta content="no-cache" http-equiv="Pragma">
+<meta content="-1" http-equiv="Expires">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/ui/bb-icon2.ico" rel="SHORTCUT ICON" type="image/x-icon">
+<link href="/common/shared.css?v=3000.1.3-rel.70+214db31" id="css_0" rel="stylesheet" type="text/css">
+<link href="/branding/themes/UWE/theme.css?v=3000.1.3-rel.70+214db31" id="css_1" rel="stylesheet" type="text/css">
+<link href="/branding/themes/UWE/app_nav.css?v=3000.1.3-rel.70+214db31" id="css_2" rel="stylesheet" type="text/css">
+<link href="/branding/colorpalettes/UWE/generated/colorpalette.generated_default.css?v=3000.1.3-rel.70+214db31" id="css_3" rel="stylesheet" type="text/css">
+<link href="/branding/_1_1/brand.css?ts=1471952637330&amp;v=3000.1.3-rel.70+214db31" id="css_4" rel="stylesheet" type="text/css">
+<link href="/webapps/blackboard/announcements/announcements.css?v=3000.1.3-rel.70+214db31" id="css_5" rel="stylesheet" type="text/css">
+<style id="courseMenuCustomCSS" type="text/css">
+
+.noteditmode .listCm .courseMenu a:hover span, 
+.noteditmode .listCm .courseMenu a:focus span {
+	color:#000000!important;
+}
+
+
+#courseMenuPalette div.navPaletteContent ul li a, 
+#courseMenuPalette h3 a, 
+#previewCourseMenu h3 a,
+.navPaletteContent h3 a.submenuLink:before, 
+.navPaletteContent h3 a.submenuLink_active:before,
+ #courseMenuPalette div.navPaletteContent ul li a span, 
+ #courseMenuPalette .navPaletteContent .subhead
+{
+  color: #000000;
+  text-shadow: none;
+}
+
+#courseMenuPalette ul.courseMenu li.divider hr
+{
+  background-color: #000000;
+}
+
+#courseMenuPalette ul.courseMenu li h4
+{
+  color: #000000;
+}
+
+#courseMenuPalette h4.treehead
+{
+  color: #000000;
+}
+
+#courseMenuPalette div.navPaletteContent
+{
+  background-color: #FFFFFF;
+}
+
+/*Active course menu view bubble stem*/
+#courseMenuPalette .actionBarMicro .active > a:after {
+ 	border-bottom-color: #FFFFFF;
+}
+
+
+</style>
+<style type="text/css">.topGlobalLinks a.home{background-image:url(/images/console/icons/home_0.gif)}.bottom-buttons-home a{background-image:url(/images/console/icons/home_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.help{background-image:url(/images/console/icons/help_0.gif)}.bottom-buttons-help a{background-image:url(/images/console/icons/help_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.logout{background-image:url(/images/console/icons/logout_0.gif)}.global-nav-bar .logout-link,.global-nav-bar .logout-link:hover,.global-nav-bar .logout-link:focus{background-image:url(/images/console/icons/logout_0.gif);background-repeat:no-repeat;background-position:50% 0}</style>
+<link href="/ui/styles/print.css?v=3000.1.3-rel.70+214db31" media="print" rel="stylesheet" type="text/css">
+<script src="/javascript/i18n.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+
+var JS_RESOURCES = new Object();
+
+function _init_bundle_JS_RESOURCES() {
+
+    JS_RESOURCES['validation.email'] = 'A fully qualified email address (for example, info@blackboard.com) must be entered.';
+    JS_RESOURCES['validation.radio.required'] = 'Make a selection to continue.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click OK to save the incomplete answer.';
+    JS_RESOURCES['common.list.separator.comma'] = '{0}, {1}';
+    JS_RESOURCES['active.filter.search.terms'] = 'Search Terms';
+    JS_RESOURCES['validation.maximum_length.plural'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by {2} characters.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click OK to save the incomplete answer.';
+    JS_RESOURCES['validation.multiSelect.minItems'] = 'Multiselect box should contain at least {0} number of items.';
+    JS_RESOURCES['validation.cmp_field.required'] = 'A value must be provided for {0}\nwhen {1} field is not empty';
+    JS_RESOURCES['warning.email'] = 'Email address is a recommended field. Users will be unable to use parts of the system without an email address.';
+    JS_RESOURCES['validation.maximum_length.no_name.singular'] = 'Must not contain more than {0} characters.\nReduce the size of the input by one character.';
+    JS_RESOURCES['validation.multiSelect.maxItems'] = 'Multiselect box should not contain more than {0} number of items.';
+    JS_RESOURCES['validation.number'] = 'A valid numeric value must be entered: {0}.';
+    JS_RESOURCES['portalmodule.section.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['show.helptext'] = 'Show Help Text';
+    JS_RESOURCES['validation.date.required'] = 'A complete date value must be provided: {0}.';
+    JS_RESOURCES['validation.password'] = 'Password cannot be empty or contain only spaces.';
+    JS_RESOURCES['validation.mismatch'] = 'The values entered do not match: {0}.\nConfirm: {0}.';
+    JS_RESOURCES['validation.percent'] = 'A valid per-cent value between 0 and 100 must be entered.';
+    JS_RESOURCES['validation.maximum_length.no_name.plural'] = 'Must not contain more than {0} characters.\nReduce the size of the input by {1} characters.';
+    JS_RESOURCES['field_name.substitute'] = '\'\'{0}\'\' input field';
+    JS_RESOURCES['validation.invalid_value'] = 'Invalid numeric value provided: {0}.';
+    JS_RESOURCES['validation.required'] = 'A value must be provided: {0}.';
+    JS_RESOURCES['validate.alignment.missing.content'] = 'You selected alignments, but did not select any alignable content to copy.';
+    JS_RESOURCES['active.filter.free.form.text.blank'] = 'Specify a value for the search text field';
+    JS_RESOURCES['validation.system_role.reserve'] = '"bb" is not permitted at the beginning of a role ID.';
+    JS_RESOURCES['validation.date_past'] = 'The end date cannot be earlier than the start date.';
+    JS_RESOURCES['confirm.delete_item_value'] = 'This item {0} will be deleted. Continue?';
+    JS_RESOURCES['validation.invalid_chars'] = 'Contains illegal characters: {0}.\nDelete these characters: {1}';
+    JS_RESOURCES['hide.helptext'] = 'Hide Help Text';
+    JS_RESOURCES['validate.range.lessthen.str'] = 'Less Than {0}';
+    JS_RESOURCES['validate.login.invalid.username.or.pass'] = 'Enter a username and password.';
+    JS_RESOURCES['validation.date_past.confirm'] = 'The time is in the past.\nContinue with this time?';
+    JS_RESOURCES['validation.negative'] = 'A valid non-negative value must be entered: {0}.';
+    JS_RESOURCES['validation.url'] = 'A valid URL (for example, http://www.myuniversity.ac.uk) must be entered.';
+    JS_RESOURCES['validate.range.overlap'] = 'criteria ({0}) overlaps criteria ({1}).';
+    JS_RESOURCES['validate.range.between.str'] = 'Between {0} and {1}';
+    JS_RESOURCES['validation.portal.tool.items.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['validation.association.refresh.confirm'] = 'The associated items information might have been updated.\nClick \'OK\' to refresh the list or click \'Cancel\' to keep the current page.';
+    JS_RESOURCES['validate.enrolloptions.error.codeconflict'] = 'The Access Code Enrolment option conflicts with the selection of {instructor} Led enrolment.';
+    JS_RESOURCES['list.checkToSelectAllItems'] = 'Tick to select all items';
+    JS_RESOURCES['validation.option.required'] = 'At least one option must be selected from the list.';
+    JS_RESOURCES['active.filter.changed.alert'] = 'criteria now contain';
+    JS_RESOURCES['vtbe.artifact.footer.validate.nameIfSaveArtifact'] = 'Specify a Name in order to Save as a Reusable Object.';
+    JS_RESOURCES['validate.invalidate.number'] = 'Please input valid number instead of {0}.';
+    JS_RESOURCES['validation.valid_course_id'] = 'Course ID contains illegal characters or multibyte characters.';
+    JS_RESOURCES['assessment.incomplete.confirm'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click OK to submit assessment.';
+    JS_RESOURCES['validate.enrolloptions.error.nooption'] = 'Warning: Choose either the {instructor} Led or the Self-Enrolment option.';
+    JS_RESOURCES['validation.date_equal'] = 'The start date cannot be equal to the end date.';
+    JS_RESOURCES['validation.cmp_field.rejected'] = 'The {0} cannot be used without a corresponding {1} value.';
+    JS_RESOURCES['validation.time.required'] = 'A complete time value must be provided: {0}.';
+    JS_RESOURCES['validation.integer_number'] = 'A valid integer numeric value must be entered: {0}.';
+    JS_RESOURCES['validation.maximum_length'] = 'Must not contain more than 255 characters';
+    JS_RESOURCES['validate.enrolloptions.error.emailrequestconflict'] = 'The selected email enrolment option conflicts with the self-enrolment selection.';
+    JS_RESOURCES['validate.range.morethen.str'] = 'More Than {0}';
+    JS_RESOURCES['invalid_char.space'] = 'space';
+    JS_RESOURCES['notification.submit'] = 'Action already submitted.\nWait until the action is complete.';
+    JS_RESOURCES['validation.plain_text.confirm'] = 'To display equations correctly in this document, Smart Text or HTML format must be selected.\nClick \'OK\' to save in selected Plain Text format or click \'Cancel\' to select a new format.';
+    JS_RESOURCES['validation.allow_negtive.percent'] = 'A valid per-cent value between -100 and 100 must be entered.';
+    JS_RESOURCES['invalid_char.comma'] = 'comma';
+    JS_RESOURCES['confirm.remove_item'] = 'This action is final and cannot be undone. Continue?';
+    JS_RESOURCES['list.uncheckToDeselectAllItems'] = 'Untick to deselect all items';
+    JS_RESOURCES['validation.maximum_length.singular'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by one character.';
+    JS_RESOURCES['vtbe.artifact.footer.validate.saveLocationIfSaveArtifact'] = 'Specify a location for the Reusable Object.';
+    JS_RESOURCES['validation.minimum_length'] = 'A minimum of {0} characters must be entered: {1}.';
+    JS_RESOURCES['assessment.incomplete.confirm.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click OK to submit assessment.';
+    JS_RESOURCES['validation.image_type'] = 'Unknown image type: {0}. Image may not display correctly.';
+    JS_RESOURCES['validate.invalidate.number.space'] = 'Space';
+
+    JS_RESOURCES.getString = i18n_get_string;
+    JS_RESOURCES.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_JS_RESOURCES();
+
+</script>
+<script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'dd/MM/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^([0-9]{1,3}(\\,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'd MMM[ yyyy]{\'&#8212;\'d MMM, yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_NAME.03169'] = 'ARIAL.TTF';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_SIZE.03168'] = '8';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd d/M';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'DMY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_PATH.03170'] = 'C:/WINNT/Fonts';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '1';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, d MMM, yyyy';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'DD/MM/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd d/M';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+<script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'dd/MM/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^([0-9]{1,3}(\\,[0-9]{3})*(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'd MMM[ yyyy]{\'&#8212;\'d MMM, yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_NAME.03169'] = 'ARIAL.TTF';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_SIZE.03168'] = '8';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd d/M';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'DMY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'MON TUE WED THU FRI SAT SUN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_PATH.03170'] = 'C:/WINNT/Fonts';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '1';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, d MMM, yyyy';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'DD/MM/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd d/M';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+<script src="/javascript/cdn.js" type="text/javascript"></script>
+<script src="/javascript/prototype.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/fastinit.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/page.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/validateForm.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/numberLocalizer.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/accessibleSelect.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/popup.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/cookie.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/lz-string.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/client_cache.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/globalNavigation.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/UserDataDWRFacade.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/MashupDWRFacade.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/javascript/esapi4js/esapi-compressed.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/esapi4js/resources/i18n/ESAPI_Standard_en_US.properties.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/esapi4js/resources/Base.esapi.properties.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/webapps/blackboard/announcements/announcement.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/javascript/ngui/designerParticipantView.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/titlebartagutils.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/actionPanel.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/CourseMenuDWRFacade.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/UserPageInstructionsSettingDWRFacade.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/javascript/dwr/engine.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/breadcrumbs.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/tree.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/coursemenu.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/dwr/util.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/webapps/portal/global_nav_menu.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.25+374eaf9" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/UserDWRFacade.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/webapps/portal/uwe-jquery.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.25+374eaf9" type="text/javascript"></script>
+<script src="/webapps/bb-social-learning-bb_bb60/js/mybb.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.19+7be8abe" type="text/javascript"></script>
+<script src="/webapps/portal/overlay/welcomeOverlay.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.25+374eaf9" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/ToolActivityService.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/webapps/bb-gate-bb_bb60/js/tool_service.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.19+6edfb8b" type="text/javascript"></script>
+<script src="/webapps/bb-social-learning-bb_bb60/js/social.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.19+7be8abe" type="text/javascript"></script>
+<script src="/webapps/blackboard/dwr_open/interface/ProfileProviderService.js?v=3000.1.3-rel.70+214db31_3000.1.3-rel.26+b1c994b" type="text/javascript"></script>
+<script src="/javascript/browserSpecificBehavior.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/scriptaculous/builder.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/scriptaculous/effects.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/scriptaculous/dragdrop.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/scriptaculous/controls.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/scriptaculous/slider.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/ngui/lightbox.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+<script src="/javascript/quick_links.js?v=3000.1.3-rel.70+214db31" type="text/javascript"></script>
+</link></link></link></link></link></link></link></link></meta></meta></meta></meta></meta></meta></meta></meta></head>
+<body>
+<!-- JQUERY FOR CLOCK AND SERVER ID Added by NF -->
+<!-- END OF JQUERY FOR CLOCK AND SERVER ID -->
+<h1 class="hideoff hideFromQuickLinks">Open Quick Links</h1><div id="quick_links_wrap" style="top: 68px;"><a aria-haspopup="true" href="#" id="quick_links_lightbox_link" onclick="quickLinks.lightboxHelper.toggleLightbox(); return false;" role="button" tabindex="1" title="Open Quick Links">Quick Links</a></div><div aria-hidden="true" class="hideoff" id="quickLinksLightboxDiv" style="display:none"><div class="ax-content"><div class="content-lite"><div id="quick_links_landmarks_section"><h2 class="hideFromQuickLinks">Page Landmarks</h2><ul class="shortcut-list" id="quick_links_landmark_list"></ul></div><div id="quick_links_headings_section"><h2 class="hideFromQuickLinks">Content Outline</h2><ul class="shortcut-list" id="quick_links_heading_list"></ul></div></div><div class="legend" id="quick_links_hotkeys_section"><h2 class="hideFromQuickLinks">Keyboard Shortcuts</h2><ul class="keycombos" id="quick_links_hotkey_list"></ul></div></div></div><h1 class="hideoff hideFromQuickLinks"></h1><div class="global-nav-bar-wrap"><div class="global-nav-bar logout"><a class="nav-link logout-link" href="/mylogin/logout.asp" id="topframe.logout.label" target="_top" title="Logout"> Logout</a></div><div class="global-nav-bar" data-preview="false" id="global-nav" role="navigation"><div class="hideoff">Global Menu</div><a accesskey="m" aria-haspopup="true" class="nav-link u_floatThis-right" href="#global-nav-flyout" id="global-nav-link" role="navigation" tabindex="1" title="Open Global Navigation menu"><img alt="" class="global-top-avatar" datatooltitle="User Avatar Image" id="global-avatar" src="/images/ci/ng/default_profile_avatar.png"> Ter_jing Ng<span id="badgeTotal" style="visibility: hidden" title=""><span class="hideoff" id="badgeAXLabel">Activity Updates</span><span class="badge" id="badgeTotalCount" title=""></span></span><img alt="Expand Global Nav" class="global-toggle" id="global-toggle-img" src="/images/ci/mybb/arrowDown-topnav.png"/></img></a><div class="flyout-menu" id="global-nav-flyout" role="application" style="display: none;"><ul class="bottom-buttons" id="bottomButtons"><li class="bottom-buttons-home"><a class="home" href="http://www.uwe.ac.uk" id="topframe.home.label" role="menuitem" target="_blank" title="Home"> Home</a></li><li class="bottom-buttons-help"><a class="help" href="#" id="topframe.help.label" onclick="globalNavigation.openHelpWindow('http://info.uwe.ac.uk/online/blackboard/');" role="menuitem" title="Help"> Help</a></li></ul></div></div><div class="global-nav-bar clock"><div class="nav-link clock" id="global-nav-clock"><img alt="" height="10" src="/branding/themes/UWE/images/clock-icon.gif" style="margin-right:5px;" width="10"><span id="timedate"></span><span id="timezone"> </span><img alt="" height="10" src="/branding/themes/UWE/images/server.png" style="margin-right:5px;margin-left:20px;" width="8"><span id="server">8</span></img></img></div></div></div>
+<!-- global_nav.jsp -->
+<div id="globalNavPageNavArea" style="height: 89px;">
+<table class="bouncer" summary="Top frame table">
+<tbody><tr>
+<td>
+<div class="topTabs bgBanner" id="topTabs">
+<div class="brandingImgWrap">
+<a href="https://blackboard.uwe.ac.uk" target="_blank" title="UWE Bristol Blackboard Home Page">
+<img alt="UWE Bristol Blackboard Home Page" class="bannerImage" src="/branding/_1_1/uwe-logo4.png" title="UWE Bristol Blackboard Home Page">
+</img></a>
+</div>
+<div class="tabWrapper-left">
+<h2 class="hideoff">Top Frame Tabs</h2>
+<table class="appTabs transparent" id="appTabList" summary="Tab List table">
+<tbody><tr>
+<td id="Welcome">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_19_1" target="_top"><span>Welcome</span>
+<span class="hideoff"> Tab 1 of 7</span>
+</a>
+</td>
+<td id="Coursework">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_39_1" target="_top"><span>Coursework</span>
+<span class="hideoff"> Tab 2 of 7</span>
+</a>
+</td>
+<td class="active" id="Courses.label">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1" target="_top"><span>Courses</span>
+<span class="hideoff"> Tab 3 of 7 (active tab)</span>
+</a>
+</td>
+<td id="Academic Support">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_30_1" target="_top"><span>Academic Support</span>
+<span class="hideoff"> Tab 4 of 7</span>
+</a>
+</td>
+<td id="bbcms.label">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_11_1" target="_top"><span>Content Collection</span>
+<span class="hideoff"> Tab 5 of 7</span>
+</a>
+</td>
+<td id="Library">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_7_1" target="_top"><span>Library</span>
+<span class="hideoff"> Tab 6 of 7</span>
+</a>
+</td>
+<td id="FET">
+<a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_34_1" target="_top"><span>FET</span>
+<span class="hideoff"> Tab 7 of 7</span>
+</a>
+</td>
+</tr>
+</tbody></table>
+<div class="clearfloats"></div>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="globalNavPageContentArea" style="height: 961px; overflow: visible;">
+<h2 class="hideoff">
+ Current Location
+</h2>
+<div class="breadcrumbs clearfix " id="breadcrumbs">
+<div class="breadcrumb-controls clearfix" id="breadcrumb_controls_id">
+<div class="helpLink hidden" id="helpTextToggle">
+<a class="browseIcon" href="#" id="helpTextToggleLink">
+<img alt="Turn help text off and on" id="helpTextToggleImg" src="/images/ci/ng/small_help_on2.gif"/></a>
+</div>
+<input id="showHelperSetting" name="showHelperSetting" type="hidden" value="">
+</input></div>
+<div class="path noToggle" role="navigation">
+<ol class="clearfix">
+<li class="root coursePath"> <a href="/webapps/blackboard/execute/courseMain?course_id=_269718_1" title="UFCFM6-15-3 - Requirements engineering 16sep_1">                  UFCFM6-15-3 - Requirements engineering 16sep_1
+              </a> <div class="courseArrow" id="arrowContext_1" onclick="page.ContextMenu.changeArrowInBreadcrumb(1, event );">
+<span bb:beforeshowfunc="" bb:contextparameters="" bb:menugeneratorurl="/webapps/blackboard/execute/getCrossCourseMenuHTML?course_id=_269718_1" bb:menuorder="" bb:navitem="" bb:overwritenavitems="" class="contextMenuContainer" style=" display: inline;">
+<a class="cmimg editmode jsInit " href="#contextMenu" id="cmlink_4bada5bfff8148059af6a151aed7157b" onfocus="page.ContextMenu.LI(event, 'cmdiv_4bada5bfff8148059af6a151aed7157b',false);" onmouseover="page.ContextMenu.LI(event, 'cmdiv_4bada5bfff8148059af6a151aed7157b',false);" title="Course-to-Course Navigation"> <img alt="" src="/images/ci/icons/cmlink_generic.gif"/></a>
+<div class="cmdiv" id="cmdiv_4bada5bfff8148059af6a151aed7157b" style="display: none;">
+<ul id="cmul0_4bada5bfff8148059af6a151aed7157b">
+<li class="contextmenubar_top">
+<a class="close-menu" href="#close">
+<span aria-hidden="true" class="close-contextmenu" data-icon="X" role="presentation"></span>
+<img alt="Close Menu" src="/images/ci/ng/close_mini.gif"/></a>
+</li>
+</ul>
+</div>
+</span>
+</div> </li>
+<li class="placeholder">                   Announcements
+                        </li>
+</ol>
+</div>
+</div>
+<div class="locationPane">
+<div class="navigationPane " id="navigationPane">
+<div class="menuWrap" id="menuWrap">
+<div id="puller">
+<a class="clickpuller" href="#" id="menuPuller" title="Hide Course Menu">
+<img alt="Hide Course Menu" id="expander" src="/images/spacer.gif">
+</img></a>
+</div>
+<div class="menuWrap-inner">
+<input name="blackboard.platform.security.NonceUtil.nonce" type="hidden" value="ec098111-57c0-4219-bdbd-89a4f09599fa"><div class="navPalette listCm navPaletteExpCol" id="courseMenuPalette"><div class="actionBarMicro clearfix"><h2 class="hideoff">Menu Management Options</h2><ul class="nav clearfix u_floatThis-right"><li class="secondaryButton " id="refreshMenuLink"><a href="#" title="Refresh"><span><img alt="Refresh" src="/images/ci/ng/small_refresh.gif"/></span></a></li><li class="secondaryButton " id="courseMapButton"><a href="#" title="Display Course Menu in a Window"><span><img alt="Display Course Menu in a Window" src="/images/ci/ng/small_new_window.gif"/></span></a></li></ul></div><div class="navPaletteContent"><h2 class="hideoff" tabindex="-1">Course Menu:</h2><div id="courseMenuPalette_paletteTitleHeading"><div class="navPaletteTitle"><h3 aria-expanded="true"><a class="comboLink" href="#" id="courseMenu_link" title="Collapse UFCFM6-15-3 - Requirements engineering 16sep_1">UFCFM6-15-3 - Requirements engineering 16sep_1</a></h3><h3><a class="submenuLink" href="/webapps/blackboard/execute/courseMain?course_id=_269718_1" id="courseMenu_combo" target="" title="Go to Course Entry Page"><img alt="Course Entry Page" src="/images/ci/icons/generic_dbl_arrow_right.gif"/></a></h3></div></div><ul class="courseMenu" id="courseMenuPalette_contents"><li class="clearfix " id="paletteItem:_3036121_1"><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_269718_1&amp;tool_id=_139_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="Announcements">Announcements</span></a></li><li class="clearfix " id="paletteItem:_3035997_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692316_1&amp;mode=reset" target="_self"><span title="Module Introduction">Module Introduction</span></a></li><li class="clearfix " id="paletteItem:_3035998_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692317_1&amp;mode=reset" target="_self"><span title="Module Handbook">Module Handbook</span></a></li><li class="clearfix " id="paletteItem:_3035999_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692318_1&amp;mode=reset" target="_self"><span title="Module Schedule">Module Schedule</span></a></li><li class="clearfix " id="paletteItem:_3036001_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692319_1&amp;mode=reset" target="_self"><span title="Learning Materials">Learning Materials</span></a></li><li class="clearfix " id="paletteItem:_3036003_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692320_1&amp;mode=reset" target="_self"><span title="Assignments">Assignments</span></a></li><li class="clearfix " id="paletteItem:_3036122_1"><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_269718_1&amp;tool_id=_194_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="Contacts">Contacts</span></a></li><li class="clearfix divider" id="paletteItem:_3036123_1"><hr/></li><li class="clearfix " id="paletteItem:_3036124_1"><a href="http://www1.uwe.ac.uk/students/studysupport/studyskills.aspx" target="_blank"><span title="Study Skills">Study Skills</span></a></li><li class="clearfix " id="paletteItem:_3036005_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692321_1&amp;mode=reset" target="_self"><span title="Learner Support">Learner Support</span></a></li><li class="clearfix " id="paletteItem:_3036007_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692322_1&amp;mode=reset" target="_self"><span title="Communications Policy">Communications Policy</span></a></li><li class="clearfix " id="paletteItem:_3036009_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_4692323_1&amp;mode=reset" target="_self"><span title="Module Enhancement">Module Enhancement</span></a></li><li class="clearfix " id="paletteItem:_3108294_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_5123816_1&amp;mode=reset" target="_self"><span title="Feedback on the module">Feedback on the module</span></a></li><li class="clearfix " id="paletteItem:_3118853_1"><a href="/webapps/blackboard/content/listContent.jsp?course_id=_269718_1&amp;content_id=_5211434_1&amp;mode=reset" target="_self"><span title="Module Feedback">Module Feedback</span></a></li></ul></div></div>
+</input></div>
+</div>
+</div>
+<div class="contentPane " id="contentPanel">
+<div class="shadow">
+<div id="editmodeWrapper">
+<div class="contentBox " id="content">
+<div class="localViewToggle clearfix">
+<h2 class="hideoff">View options</h2>
+<ul class="clearfix">
+<li>
+<a href="javascript:Announcement.searchAnnouncements('3')" id="3" style=" position: relative; z-index: 1;" title="View All">View All
+      </a>
+</li>
+<li class="active">
+<a class="active" href="javascript:Announcement.searchAnnouncements('2')" id="2" style=" position: relative; z-index: 1;" tabindex="1" title="Course">Course
+   <span class="hideoff">(active tab)</span> </a>
+</li>
+<li>
+<a href="javascript:Announcement.searchAnnouncements('1')" id="1" style=" position: relative; z-index: 1;" title="Institution">Institution
+      </a>
+</li>
+</ul>
+</div>
+<div class="pageTitle clearfix " id="pageTitleDiv">
+<div class="pageTitleIcon" id="pageTitleBar" tabindex="0">
+<img alt="" id="titleicon" src="/images/ci/sets/set01/announcement_on.gif"><h1 id="pageTitleHeader" tabindex="-1"><span id="pageTitleText">
+  Announcements  </span></h1>
+<span class="titleButtons" id="_titlebarExtraContent"></span>
+</img></div>
+</div>
+<div class="container clearfix" id="containerdiv">
+<h2 class="hideoff">Content</h2>
+<form action="/webapps/blackboard/execute/announcement" id="announcementForm" method="post" name="announcementForm"><input name="blackboard.platform.security.NonceUtil.nonce" type="hidden" value="c7ff1537-da86-468c-bacd-da241fc75d51">
+<input id="method" name="method" type="hidden" value="search"><input id="viewChoice" name="viewChoice" type="hidden" value="2"><input id="editMode" name="editMode" type="hidden" value="false"><input id="tabAction" name="tabAction" type="hidden" value="false"><input id="announcementId" name="announcementId" type="hidden" value=""><input id="course_id" name="course_id" type="hidden" value="_269718_1"><input id="context" name="context" type="hidden" value="course"><input id="internalHandle" name="internalHandle" type="hidden" value="announcements_entry"><input name="searchSelect" type="hidden" value="_269718_1"><ul class="announcementList announcementList-read" id="announcementList">
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_578876_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam marks</h3>
+<div class="details">
+<p><span>Posted on: Friday, 20 January 2017 11:44:02 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I thnk that the exam marks should be available in myUWE soon as I have done all that I have to do.</p>
+<p>The marks are unofficial and not necessarily final. They only become final after they have been to the summer Field Board.</p>
+<p>On the whole the exam was done very well and there are some excellent results.</p>
+<p>Regards</p>
+<p>Stewart</p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_578369_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam marks</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 18 January 2017 13:11:56 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Please ignore any marks on Blackboard. I am still in the process of marking and having the exam second-marked. I hope that your marks will be available by Friday this week.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_576858_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam marking</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 12 January 2017 08:12:12 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I hope to complete the marking of th exam by the 20th of January.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_575812_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module feedback</h3>
+<div class="details">
+<p><span>Posted on: Friday, 6 January 2017 16:23:43 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>HI,</p>
+<p>    if you have the time, I would be very grateful if you could complete the short Module Feedback questionnaire. You can access it on Blackboard by following the Module Feedback tab from this course.</p>
+<p>Thanks</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_575162_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam question: activity diagrams</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 3 January 2017 11:12:04 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>HI,</p>
+<p>   a student wrote to me as follows:</p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">"I am pretty confused as to when should I use a merge node, and when should I use a synchronization bar (join) when building a UML Activity Diagram.</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">They both seem to serve the same purpose which is to merge/join."</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Chapter 3 of the book UML 2.0 by Miles and Hamilton covers this. It's an eBook in the library. You can download a copy or access it online at: <a href="https://www.dawsonera.com/abstract/9780596519117">https://www.dawsonera.com/abstract/9780596519117</a></span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Regards</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Stewart</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;"></span></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_575157_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam format: another question</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 3 January 2017 11:04:40 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    a student wrote to me as follows:</p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">"I was wondering if there are more past papers than the one uploaded for the module? I had a look under the library content where there are past papers however can not seem to find anything for Requirements Engineering. Is this due to not having anything uploaded or maybe might have been renamed and i am looking for the wrong name. I can't seem to search the module code."</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">There is only one specimen exam paper for this module. It's in the Learning Materials section of the module on Blackboard in week 12.</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Regards</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Stewart</span></p>
+<br/></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_575155_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam format</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 3 January 2017 11:04:57 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    a student wrote to me as follows:</p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">"One of the power point presentations says the exam has 4 questions and we have to answer 2. Another presentation says that there are 5 questions, one mandatory and choose 2 others."</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">The exam format is the </span><span style="color: black; font-family: 'Calibri',sans-serif;">one with four questions where you have to answer two.</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Regards</span></p>
+<p><span style="color: black; font-family: 'Calibri',sans-serif;">Stewart</span></p>
+<br>
+<p><br> </br></p></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_573456_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module Feedback</h3>
+<div class="details">
+<p><span>Posted on: Friday, 9 December 2016 16:16:07 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    all modules which have just finished, including this one, have a new tab called "Module Feedback". If you click on this link you can access  a questionnaire which elicits your feedback on the module.I would like to encourage you to provide feedback to me in this way.</p>
+<p>Also, if you attended Richard Mason's lecture and workshop on Agile methods, could you have a go at the very short questionnaire at the end of the following link <a href="https://www.surveymonkey.co.uk/r/G5YHRFW">https://www.surveymonkey.co.uk/r/G5YHRFW</a></p>
+<p>Finally, the Week 12 tab in the Learning Materials section contains a specimen exam paper and some model answers. And there is also a presentation on revision which summarises the lectures and tutorials and provides some advice and tips for tackling exam questions.</p>
+<p>Happy Christmas</p>
+<p>Stewart</p>
+<br>
+<br>
+<br/></br></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_573218_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Feedback on the Agile talk and user story writing workshop</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 8 December 2016 18:14:56 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>   if you attended the talk on Agile and the user story writing workshop on Thursday (8th December), I would be interested in your feedback and any ideas you have for improving either.</p>
+<p>Please go to the very short (three question) survey at <a href="https://www.surveymonkey.co.uk/r/TG2TR3S">https://www.surveymonkey.co.uk/r/TG2TR3S</a></p>
+<p>I look forward to getting your feedback.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_571994_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module Feedback</h3>
+<div class="details">
+<p><span>Posted on: Monday, 5 December 2016 23:20:27 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">This is your opportunity to tell us what you think about UFCFM6-15-3_16sep_1. 
+A short <a href="https://blackboard.uwe.ac.uk/webapps/portal/frameset.jsp?tab_tab_group_id=_19_1&amp;url=http://www.uwe.ac.uk" target="_parent">Module Feedback</a> is now available to complete.  
+The module feedback for UFCFM6-15-3_16sep_1 will remain available until <b>8/6/2017</b>.
+Your feedback is essential as it helps us to improve module teaching and support. Information gathered will be shared in Student Rep Staff Forums (SRSF) and reported through University processes to improve the student experience.
+<br> <br>Guidance on completing the module feedback is available on the <a href="http://info.uwe.ac.uk/online/blackboard/students/guides/module-feedback.asp" target="_blank">Blackboard Support website</a>.<br>
+</br></br></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Blackboard Support (NF)</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_570986_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's lecture and tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 2 December 2016 17:22:32 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Hi,</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">   Thanks to everyone who came to the tutorials today and provided feedback on the module. There were some excellent suggestions for changes. I will be summarising in a report all of your ideas about what you like, the challenges and what you would like to see modified; I will send it to you when it's ready.</span><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;"></span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Next week in the lecture we have our guest speaker from Intel. He will be providing a talk on Agile and in particular on Scrum. He will then run a workshop on writing user stories. This could help you now and later when you are working in industry.</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">In the tutorial we will doing three things:</span></p>
+<ol>
+<li style="margin-left: 42pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Covering the last topic of the module: viz managing requirements change</span></li>
+<li style="margin-left: 42pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Going over the remaining two specimen exam questions</span></li>
+<li style="margin-left: 42pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Going over a summary of all of the lectures and having a presentation from me on how to tackle requirements engineering questions in exams.</span></li>
+</ol>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Regards</span></p>
+<p><span style="color: black; line-height: 107%; font-family: 'Verdana',sans-serif; font-size: 9pt;">Stewart</span></p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_568574_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Putting it all together</h3>
+<div class="details">
+<p><span>Posted on: Friday, 25 November 2016 17:30:51 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p style="text-align: justify;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">From yesterday's lecture and today’s practical on <span class="mceitemhiddenspellword1">formalising</span> use <span class="mceitemhiddenspellword1">case</span> <span class="mceitemhiddenspellword1">preconditions</span> and post <span class="mceitemhiddenspellword1">conditions</span> using <span class="mceitemhiddenspellword1">an initial</span> domain model, an<span class="mceitemhiddenspellword1">d using</span> the results to drive the design of <span class="mceitemhiddenspellword1">alternative</span> <span class="mceitemhiddenspellword1">sequence</span> m<span class="mceitemhiddenspellword1">odels</span>, you <span class="mceitemhiddenspellword1">should</span> <span class="mceitemhiddenspellword1">see</span> the overall path we have taken on the emodule. We <span class="mceitemhiddenspellword1">started</span> <span class="mceitemhiddenspellword1">with</span> <span class="mceitemhiddenspellword1">eliciting</span> <span class="mceitemhiddenspellword1">requirements from stakeholders using</span> a range of methods <span class="mceitemhiddenspellword1">including</span> e.g ethnography and <span class="mceitemhiddenspellword1">Contextual</span> Design and representing the resulting <span class="mceitemhiddenspellword1">served</span> <span class="mceitemhiddenspellword1">systems,</span> in part, using <span class="mceitemhiddenspellword1">workflowws</span> <span class="mceitemhiddenspellword1">modelled</span> as activity diagrams; <span class="mceitemhiddenspellword1">analysing</span> the <span class="mceitemhiddenspellword1">workflow</span> <span class="mceitemhiddenspellword1">models</span> to <span class="mceitemhiddenspellword1">identify</span> potential computer <span class="mceitemhiddenspellword1">based</span> s<span class="mceitemhiddenspellword1">ystems</span> and their constituent use cases; <span class="mceitemhiddenspellword1">representing</span> <span class="mceitemhiddenspellword1">these</span> in requirements <span class="mceitemhiddenspellword1">documents</span> <span class="mceitemhiddenspellword1">using,</span> e.g., the <span class="mceitemhiddenspellword1">Volere</span> template; <span class="mceitemhiddenspellword1">developing</span> use case specifications from them; <span class="mceitemhiddenspellword1">formalising</span> these <span class="mceitemhiddenspellword1">with</span> the <span class="mceitemhiddenspellword1">aid</span> of identified class models; an<span class="mceitemhiddenspellword1">d finally</span> <span class="mceitemhiddenspellword1">creating</span> <span class="mceitemhiddenspellword1">designs</span>, represented in <span class="mceitemhiddenspellword1">sequence</span> models,  to <span class="mceitemhiddenspellword1">achieve</span> the <span class="mceitemhiddenspellword1">post</span> conditions of use <span class="mceitemhiddenspellword1">cases</span>. Such designs could easily be given to a programmer to translate to code.</span></p>
+<p style="text-align: justify;"><span class="mceitemhiddenspellword1"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Along</span></span><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;"> the <span class="mceitemhiddenspellword1">way</span> we have looked at 21st century requirements engineering techniques like COTS, as well as at the <span class="mceitemhiddenspellword1">role</span> of the <span class="mceitemhiddenspellword1">customer </span> <span class="mceitemhiddenspellword1">representative</span> and user stories in Agile methods.</span></p>
+<p style="text-align: justify;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Next <span class="mceitemhiddenspellword1">week</span> we <span class="mceitemhiddenspellword1">will</span> <span class="mceitemhiddenspellword1">look</span> at one more way of representing requirements <span class="mceitemhiddenspellword1">viz</span> F<span class="mceitemhiddenspellword1">ormal</span> <span class="mceitemhiddenspellword1">Specification</span> using <span class="mceitemhiddenspellword1">the</span> Z formal <span class="mceitemhiddenspellword1">specification</span> <span class="mceitemhiddenspellword1">language</span>. <span class="mceitemhiddenspellword1">This</span> <span class="mceitemhiddenspellword1">language</span> is built up from <span class="mceitemhiddenspellword1">set</span> theory and logic. We will discuss the key advantages and the drawbacks of using this technique. The material is available now on Blackboard <span class="mceitemhiddenspellword1">for</span> y<span class="mceitemhiddenspellword1">ou</span> to review.</span></p>
+<p><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Regards</span></p>
+<p><span style="color: black; line-height: 107%; font-family: 'Verdana',sans-serif; font-size: 9pt;">Stewart </span></p>
+<br/></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_568524_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Marks and Feedback for ESSAY:Essay (1000 Words) now available from the Coursework tab in Blackboard.</h3>
+<div class="details">
+<p><span>Posted on: Friday, 25 November 2016 15:52:16 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">You can access your Mark and Feedback for ESSAY:Essay (1000 Words) from the Coursework tab in Blackboard. Guidance is available on the Blackboard Support website: <a href="http://info.uwe.ac.uk/online/blackboard/students/guides/assignments/grades-feedback.asp">http://info.uwe.ac.uk/online/blackboard/students/guides/assignments/grades-feedback.asp</a></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_566529_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Lecture feedback and next wek's lecture</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 17 November 2016 17:14:22 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Hi,</span></p>
+<p><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">    I would be very <span class="mceitemhiddenspellword1">interested</span> in your feedback on today's lecture.</span><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;"></span><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;"> If you would <span class="mceitemhiddenspellword1">like</span> <span class="mceitemhiddenspellword1">to</span> provide me <span class="mceitemhiddenspellword1">with</span> feedback, please go to the survey at: <a href="https://www.surveymonkey.co.uk/r/TJPDZ6J"><span class="mceitemhiddenspellword1">https</span>://<span class="mceitemhiddenspellword1">www</span>.<span class="mceitemhiddenspellword1">surveymonkey</span>.co.<span class="mceitemhiddenspellword1">uk</span>/r/TJPDZ6J</a></span></p>
+<p><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">I will not be here next Thursday, so next week's lecture will be taken by my colleague Dr <span class="mceitemhiddenspellword1">Jin</span> <span class="mceitemhiddenspellword1">Sa</span>. The <span class="mceitemhiddenspellword1">lecture</span> <span class="mceitemhiddenspellword1">focuses first</span> on <span class="mceitemhiddenspellword1">formalising</span> a use case <span class="mceitemhiddenspellword1">scenario</span> using class diagrams and then on exploring <span class="mceitemhiddenspellword1">alternate</span> d<span class="mceitemhiddenspellword1">esigns</span> using UML <span class="mceitemhiddenspellword1">object</span> diagrams and <span class="mceitemhiddenspellword1">sequence</span> diagrams. Dr <span class="mceitemhiddenspellword1">Sa</span> teaches <span class="mceitemhiddenspellword1">UML</span> <span class="mceitemhiddenspellword1">modelling</span> and is an expert in this a<span class="mceitemhiddenspellword1">rea</span>. On Friday, I will b<span class="mceitemhiddenspellword1">e taking</span> my <span class="mceitemhiddenspellword1">practical</span> sessions as <span class="mceitemhiddenspellword1">usual</span>; they will provide <span class="mceitemhiddenspellword1">practice</span> in <span class="mceitemhiddenspellword1">formalising</span> <span class="mceitemhidden">use </span><span class="mceitemhiddenspellword1">case</span><span class="mceitemhidden"> </span>specifications.</span></p>
+<p><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 9pt;">Regards</span></p>
+<p><span style="color: black; line-height: 107%; font-family: 'Verdana',sans-serif; font-size: 9pt;">Stewart</span></p>
+<br/></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_561883_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment submission</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 27 October 2016 14:26:09 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>I have been told that the  earlier problem has now been fixed. Please upload your assignment now. An extra 24 hours has been given so you have until 1400h on Friday to upload it.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_561877_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Deadline Extension</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 27 October 2016 14:20:57 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p class="ms-rteelement-p"><em><span style="font-size: 11.0pt; font-family: 'Segoe UI',sans-serif; font-style: normal;">As a result of an IT issue affecting Blackboard, an extension of 24 hours has been granted for all summative online submission deadlines on 27/10/16. The submission date for these assessments has been extended to 28/10/16.</span></em></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Blackboard Support (EC)</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_561810_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Uploading assignment problem</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 27 October 2016 10:50:24 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>If you are having problems uploading your assignment it may be due to a Blackboard problem</p>
+<p>I have just hadd this message from Blackboard suuport:</p>
+<p><span style="color: #1f497d; font-family: 'Calibri',sans-serif; font-size: 11pt;">"We are having a small issue with some of our servers, and this should be fixed with in the hour</span></p>
+<p><span style="color: #1f497d; font-family: 'Calibri',sans-serif; font-size: 11pt;">I’m sorry for any problems this will cause."</span></p>
+<p><span style="color: #1f497d; font-family: 'Calibri',sans-serif; font-size: 11pt;">Stewart 27/11/16 1050h</span></p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_560823_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Lecture and reading for next week's tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 21 October 2016 16:36:48 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Next week's lecture will cover Requirements Engineering in the 21st Century (see the Core lecture material in the Week folder). </span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">In the associated tutorial, we will discuss the first three sections of the paper "Construction by Configuration" by Ian Sommerville; the paper is in the tutorial folder of the Core material folder of the "Requirements Engineering in the 21st Century" folder. As you read, try to assess the impact of the "construction by configuration" approach on maintaining high quality requirements engineering.</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Over the next two weeks, we will find time to cover some specimen examination questions so that you will know what to expect in the actual examination.</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Regards</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Stewart</span></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_559397_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's tutorial reading: for 21st Oct.</h3>
+<div class="details">
+<p><span>Posted on: Friday, 14 October 2016 16:57:56 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">I would like you to read critically chapter six of the book "Contextual Design: Designing Customer-Centered Systems" by Hugh Beyer and Karen Holtzblatt. Chapter six covers the work models - flow model, sequence model, artifact model, cultural model, and physical model - used in Contextual Design. As you read try to assess critically  the extent to which they provide useful models for modelling a served system. Try to decide whether some models are more important and useful than others. Are there models that shouldn't be there? Are there models that aren't there but should be there; if so what are they. Is the notation (syntax and semantics) of each model as a clear as it should be?</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Blackboard contains the reading and also a list of questions to ponder while you read. Try to write down your answers to these questions.</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">The reading is in: Learning Materials  -&gt; Week 5 -&gt; Tutorial - &gt; Tutorial 1: the link is called "Tutorial 5: Work Models".</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;">Stewart</span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;"></span></p>
+<p style="line-height: normal; margin-bottom: 12pt;"><span style="color: black; font-family: 'Verdana',sans-serif; font-size: 12pt;"></span></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_558178_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Accessing the i* material</h3>
+<div class="details">
+<p><span>Posted on: Monday, 10 October 2016 13:35:55 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Is anyone having problems accessing the i* paper "Social Modelling for Requirements Engineering 211013" that is located incthe Optional  Material section?</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_558045_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        i* reading: access now ok</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 11 October 2016 10:02:22 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>You should now be able to access this material.</p>
+<p>Before the lecture on Thursday, please read the following pages in the paper "Modelling strategic relationships for process engineering" in the optional material section of the i* material on Blackboard:</p>
+<p>pages 16-17: introduces strategic dependency models and strategic rationale modles</p>
+<p>pages 23 - 28: presents strategic dependency models</p>
+<p>pages 46-52: strategic rationale models</p>
+<p>We will not be spending a lot of time discussing these sections, but they will help you to understand the lecture and to undertake the modelling exercises.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_557122_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 5 October 2016 10:24:24 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>I am afraid that I will not have time to review draft versions of your assignments. If you feel that some aspect of the assignment specification, or what is expected from you as a deliverable, is not clear, please use the forums on the Blackboard site to raise your issues.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_557116_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Talk from Intel Scrum guru</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 5 October 2016 10:17:24 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>The lecture during the last week of term will be given by Richard Mason from Intel. Richard is an expert in the  Scrum software development method. He will first give a presentation on  Scrum and then run a workshop on writing user stories.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_556317_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's tutorial reading</h3>
+<div class="details">
+<p><span>Posted on: Friday, 30 September 2016 15:37:38 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    in the lecture next week, I will be introducing the goal-oriented approach to requirements engineering. The tutorials which follows the day after will complement the lecture.</p>
+<p>To prepare for your tutorial, please read  critically the short paper "Exploring Alternatives during Requirements Analysis" by Mylopoulos et al. This paper focuses upon one of the key advantages of goal-oriented requirements engineering viz its ability to support the generation of alternative solutions. It also  extends slightly the approach introduced in the lecture and you should consider how successful this extension is.</p>
+<p>Regards</p>
+<p>Stewart</p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_555851_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment ESSAY:Essay (1000 Words)</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 29 September 2016 08:00:05 o'clock BST</span></p>
+<p></p><div class="vtbegenerated">Assignment ESSAY:Essay (1000 Words) will accept submissions from 13-Oct-2016 00:00:00. Submissions must be received before 27-Oct-2016 14:00:00 to be on time.</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Blackboard (Please do not reply)</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_555558_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 28 September 2016 09:28:32 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I have uploaded the assignment for the module. I will go over it with you all in tomorrow afternoon's lecture.</p>
+<p>If you spot any errors, please let me know.</p>
+<p>The handin date is Thursday the 27th of October.</p>
+<p>Regards</p>
+<p>Stewart</p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_554701_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Required advanced reading for tutorial 2</h3>
+<div class="details">
+<p><span>Posted on: Friday, 23 September 2016 15:56:11 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>For next week's tutorial, on Friday the 30th of September, please read the paper "Cooperative Systems Design" by Ian Sommerville. It's under  the Learning Materials tab on Blackboard, in the Week 2 Tutorial folder as an item called "Tutorial 2: Reading". As you read it, try to answer the questions that are in the "Tutorial 2: Question" item.</p>
+<p>Regards</p>
+<p><span style="font-size: 13px;">Stewart</span></p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_554287_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Welcome to Requirements Engineering</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 22 September 2016 13:10:32 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Welcome to the undergraduate Requirements Engineering module (UFCFM6-15-3).</p>
+<p>The module is presented in three main sections: elicitation of requirements; modelling and documenting requirements; and transforming requirements into designs. I will be presenting the lecture and taking three tutorial groups; my colleague Emmanuel Ogunshile will take one tutorial group.</p>
+<p>The module will be presented in a series of lectures and accompanying tutorials. I will be making the material available as the module proceeds. In the <strong>lectures, </strong>I will introduce key topics in requirements engineering, like requirements engineering in the 21st century. In some <strong>tutorial sessions</strong> we will discuss critically journal papers and book chapters. You will need to read and critically review each paper or chapter before attending the associated tutorial. In other tutorial sessions, you will tackle problems associated with the lecture topic for that week. Normally you will work in small groups.</p>
+<p>You will find a <strong><span style="text-decoration: underline;">schedule</span></strong> for the module in the Schedule section. You should familiarise yourself with this now.</p>
+<p>There is a link to the <strong><span style="text-decoration: underline;">specimen examination paper</span></strong> in the Week12 material. I will publish the assignment shortly.</p>
+<p>Each week, some information (in the form of indicative tutorial solutions) will only appear on Blackboard after the tutorial for that week has  taken place, so you should check this site regularly.</p>
+<p>The essential textbook for this course is: Requirements Engineering: Processes and Techniques by Kotonya and Sommerville, published by John Wiley.</p>
+<p>Stewart and Emmanuel (September 22nd, 2016) </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553898_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Student feedback day Wednesday June 15th</h3>
+<div class="details">
+<p><span>Posted on: Friday, 13 May 2016 08:55:34 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Wednesday, June the 15<span><span>th</span></span>, <span><span>i</span></span>s student feedback day in the faculty. I will be in my office, 2P32,  from 9 until 5 on that day if you wish to talk to me about the Requirements Engineering <span><span>m</span></span><span><span>odule</span></span>, e.g. about the forthcoming resit exam.</p>
+<p>You can just drop in, but if you would like to schedule an appointment in advance, please email me your preferred times <span><span>o</span></span>n that day.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553899_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam results</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 2 February 2016 15:19:05 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi All,</p>
+<p>        I <span><span>hav</span></span>e uploaded the e<span><span>xam</span></span> marks to Blackboard and they <span><span>ar</span></span>e being <span><span>m</span></span><span><span>apped</span></span> t<span><span>o</span></span> ISIS now so should be a<span><span>vailable</span></span> in <span><span>myUWE</span></span> <span><span>i</span></span>n a few minutes.</p>
+<p>regards</p>
+<p>Stewart</p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553900_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Formal specification material now available</h3>
+<div class="details">
+<p><span>Posted on: Friday, 18 December 2015 08:43:57 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>The lecture <span><span>m</span></span><span><span>aterial</span></span> for Week 11 Formal M<span><span>ethods</span></span> a<span><span>nd</span></span> R<span><span>equirements</span></span> Engineering is now available in the Core Material:Lecture <span><span>subfolder</span></span> s<span><span>tructure</span></span> for Week 11.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553901_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Intel presentation and user story execise</h3>
+<div class="details">
+<p><span>Posted on: Friday, 11 December 2015 16:13:38 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    Richard Mason from Intel, who gave the talk on Agile methods on Tuesday, has provided the presentation; it includes indicative answers to the user stories that you worked on in groups. You will find them in <span><span>th</span></span>e "Optional material"  <span><span>subfolder</span></span> of the "Requirements <span><span>Engineering</span></span> in the 21<span><span>st</span></span> Century" folder.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553902_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Thursday's tutorial: specimen exam questions: Agile lecture &amp; workshop feedback</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 8 December 2015 14:35:35 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    in order to <span><span>prepar</span></span>e for the e<span><span>xamination</span></span> in January I advise you to work through the specimen exam questions. These <span><span>ar</span></span>e located under the "Week 12 Managing changing requirements and exam revision" tab, in the Specimen Exam paper folder, <span><span>i</span></span>n the Questions and Solutions <span><span>subfolder</span></span>. The solutions will become available on Thursday after 1730h.</p>
+<p>I will not be able t<span><span>o</span></span> a<span><span>ttend</span></span> <span><span>th</span></span>e tutorial sessions on Thursday as I am attending a <span><span>m</span></span><span><span>eeting</span></span> in London. However, I will be available generally to answer questions until the 18<span><span>th</span></span> a<span><span>nd</span></span> then again after <span><span>th</span></span>e 4<span><span>th</span></span> of J<span><span>anuary</span></span>.</p>
+<p>if you attended Richard's talk on Agile today, I would be interested to hear your feedback on how <span><span>i</span></span><span><span>nteresting</span></span>, useful and enjoyable it was (or wasn't) for you. In addition, if you stayed for the story creation e<span><span>xercise</span></span> it <span><span>woul</span></span>d be useful to hear your feedback on that part <span><span>o</span></span>f today's session too. Please email me your feedback on (<a href="mailto:stewart.green@uwe.ac.uk"><span><span>stewart</span></span>.green@<span><span>uwe</span></span>.<span><span>ac</span></span>.<span><span>uk</span></span></a>) .</p>
+<p>I <span><span>hav</span></span>e enjoyed teaching you all requirements engineering this s<span><span>emester</span></span> a<span><span>nd</span></span> I hope your revision goes well and that you do well in <span><span>th</span></span>e exam.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553903_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Reminder</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 1 December 2015 13:29:13 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    don't forget there will be a revision s<span><span>ession</span></span> for the module in our tutorial groups on Thursday (3<span><span>rd</span></span>). I will overview each lecture a<span><span>nd</span></span> tutorial that we <span><span>hav</span></span>e had; I will give some gen<span><span>eral</span></span> a<span><span>dvice</span></span> <span><span>fo</span></span>r tackling exams; and I will go over the answers for <span><span>th</span></span>e last two revision questions.</p>
+<p>On Tuesday next week, we will have a workshop from a visiting Agile guru from Intel. He will cover Agile at Intel and also run a practical exercise on creating user stories (the Agile way of expressing r<span><span>equirements</span></span>).</p>
+<p>I will be attending a meeting in London next Thursday, so you should review the lecture on Changing R<span><span>equirements</span></span> in next week's tutorial.</p>
+<p>I may need to postpone until <span><span>th</span></span>e week beginning the 14<span><span>th</span></span> of December correcting the link to the Formal Specification material. I apologise for the delay in making <span><span>htis</span></span> material available.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553904_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Marks and Feedback for ESSAY:Essay (1000 Words) now available from the Coursework tab in Blackboard.</h3>
+<div class="details">
+<p><span>Posted on: Saturday, 28 November 2015 16:49:18 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">You can access your Mark and Feedback for ESSAY:Essay (1000 Words) from the Coursework tab in Blackboard. Guidance is available on the Blackboard Support website: <a href="http://info.uwe.ac.uk/online/blackboard/students/guides/assignments/grades-feedback.asp">http://info.uwe.ac.uk/online/blackboard/students/guides/assignments/grades-feedback.asp</a></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553905_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's material</h3>
+<div class="details">
+<p><span>Posted on: Friday, 20 November 2015 08:11:47 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">This week we covered characterising the <b><i><span style="text-decoration: underline;">served system</span></i></b> using UML activity diagrams to model <span class="mceitemhiddenspellword1">organisation</span>al processes.</span></p>
+<p><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">We also covered <span class="mceitemhiddenspellword1">specifying</span> UML uses cases in much more <span class="mceitemhiddenspellword1">detail</span> <span class="mceitemhiddenspellword1">using</span> use case specifications. We did this to continue our path <span class="mceitemhiddenspellword1"><b><i><span style="text-decoration: underline;">from</span></i></b></span><b><i><span style="text-decoration: underline;"> requirements to design</span></i></b>.</span></p>
+<p><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">Next week, <span class="mceitemhiddenspellword1">the</span> <span class="mceitemhiddenspellword1">lecture will</span> present ideas about how we can use <b><i><span style="text-decoration: underline;">UML class <span class="mceitemhiddenspellword1">models, UML object models</span> a<span class="mceitemhiddenspellword1">nd</span> UML sequence diagrams</span></i></b> to <span class="mceitemhiddenspellword1">explore</span> alternative object <span class="mceitemhiddenspellword1">oriented</span> designs that <span class="mceitemhiddenspellword1">satisfy</span> use <span class="mceitemhiddenspellword1">case</span> specifications. We <span class="mceitemhiddenspellword1">also</span> <span class="mceitemhiddenspellword1">practice</span> these <span class="mceitemhiddenspellword1">skills</span> on a <b><i><span style="text-decoration: underline;">case study in <span class="mceitemhiddenspellword1">the</span> t<span class="mceitemhiddenspellword1">utorial</span></span></i></b>.</span></p>
+<p><span class="mceitemhiddenspellword1"><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">This</span></span><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;"> <span class="mceitemhiddenspellword1">i</span>s <span class="mceitemhiddenspellword1">probably</span> the most  <b><i><span style="text-decoration: underline;">challenging material</span></i></b> of <span class="mceitemhiddenspellword1">the module</span>, so <span class="mceitemhiddenspellword1">you will</span> need to study <span class="mceitemhiddenspellword1">the</span> lecture <span class="mceitemhiddenspellword1">material</span> a<span class="mceitemhiddenspellword1">fter</span> the <span class="mceitemhiddenspellword1">lecture</span> but before <span class="mceitemhiddenspellword1">the</span> tutorial <span class="mceitemhiddenspellword1">i</span>n order to engage <span class="mceitemhiddenspellword1">with</span> the case <span class="mceitemhiddenspellword1">study</span> <span class="mceitemhiddenspellword1">successfully</span>. You <span class="mceitemhiddenspellword1">may</span> <span class="mceitemhiddenspellword1">also</span> n<span class="mceitemhiddenspellword1">eed</span> to refer to on<span class="mceitemhiddenspellword1">e or</span> <span class="mceitemhiddenspellword1">m</span>ore of the lecture's <span class="mceitemhiddenspellword1">reference</span> books.</span></p>
+<p><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">This effort <span class="mceitemhiddenspellword1">should</span> pay off both for the <span class="mceitemhiddenspellword1">requirements</span> engineering <span class="mceitemhiddenspellword1">module</span> a<span class="mceitemhiddenspellword1">nd</span> for your computing <span class="mceitemhiddenspellword1">projects</span> where <span class="mceitemhiddenspellword1">m</span>any of you will be using UML models and RUP activities to develop your computer-based system.</span></p>
+<p><span class="mceitemhiddenspellword1"><span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 9pt;">Stewart</span></span></p>
+<br>
+<br/></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553906_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam times</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 17 November 2015 13:23:03 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>I am trying to find out why you cannot see the times of your January examinations on <span><span>myUWE</span></span> .</p>
+<p>Meanwhile, according to <span><span>th</span></span>e information that I have been sent, the Requirements Engineering  examination will take <span><span>plac</span></span>e on the 13<span><span>th</span></span> of January, starting at 0930h.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553907_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam timetable</h3>
+<div class="details">
+<p><span>Posted on: Friday, 13 November 2015 12:08:43 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    <span><span>i</span></span> think that you should be able t<span><span>o</span> </span>see your January exam <span><span>times</span></span> a<span><span>nd</span></span> rooms now.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553908_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Lecture &amp; tutorial in week beginning 16/11</h3>
+<div class="details">
+<p><span>Posted on: Friday, 13 November 2015 07:46:39 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>   in next week's lecture and tutorial we will continue to look at both the context of, and functionality  for, computer based systems.</p>
+<p>For the context, I will introduce the modelling <span><span>o</span></span>f business processes using UML activity diagrams.</p>
+<p>For the functionality, I will cover both use case diagrams a<span><span>nd</span></span> use case specifications.</p>
+<p>There is no reading to be done this week in <span><span>preparation</span></span> for the tutorial.</p>
+<p>Thanks for the very useful feedback that y<span><span>ou</span></span> provided on Thursday. I will be compiling a report based <span><span>o</span></span>n this and will send you all a copy when it's ready.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553909_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's lecture (10/11) and tutorial 12/11)</h3>
+<div class="details">
+<p><span>Posted on: Friday, 6 November 2015 10:10:11 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>In next week's lecture <span><span>i</span></span> will be adding to your knowledge functional and non-functional requirements. I will also introduce the notion of a fit criterion which ensures that every requirement of whatever type is actually testable.</p>
+<p>In addition I will also be <span><span>i</span></span><span><span>ntroducing</span></span> a template for creating a requirements document called <span><span>Volere</span></span>.</p>
+<p>No advanced reading is required for either the lecture or the  tutorial this week.</p>
+<p><span style="text-decoration: underline;"><strong>NB</strong></span> Please note that I will not be here for the last tutorials of the term, on Thursday the 10<span><span>th</span></span> of December, as I will attending a <span><span>m</span></span><span><span>eeting</span></span> in London. I have material for you to engage with on that last Thursday. The r<span><span>evision</span></span> session which was to have been covered on 10/12 will now be covered <span><span>i</span></span>n the tutorials on the 3/12.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553910_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's lecture (3/11) and tutorial (5/11)</h3>
+<div class="details">
+<p><span>Posted on: Friday, 30 October 2015 07:39:34 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>We have now completed the half of <span><span>th</span></span>e module that looks at various methods for conceptualising served systems.</p>
+<p>From next week, we will start to look at how requirements are transformed into designs, <span><span>i</span></span>.e. into <span><span>se</span></span><span><span>rving</span></span> systems.</p>
+<p>Next week, we <span><span>w</span></span>ill begin by first revisiting basic requirements engineering concepts, then looking at <span><span>th</span></span>e role of business analyst in analysing interview transcripts to identify use cases, but the lecture and tutorial will focus on use case identification, use case writing and developing acceptance tests.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553911_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Specimen exam questions</h3>
+<div class="details">
+<p><span>Posted on: Monday, 26 October 2015 08:20:16 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>During the feedback session last year, the students expressed a desire to go over <span><span>som</span></span>e typical exam questions earlier <span><span>i</span></span>n <span><span>th</span></span>e semester. So I set this action on myself:</p>
+<ul>
+<li style="margin-left: 54pt;">Base the week six tutorial on specimen examination questions covering the material presented in weeks one to six.</li>
+</ul>
+<p>Accordingly in the second half of the lecture tomorrow, I will ask you to attempt questions <strong>one</strong> and questions <strong>three</strong> from <span><span>th</span></span>e specimen exam paper in <span><span>th</span></span>e Week 12 <span><span>m</span></span><span><span>aterial</span></span>. These questions <span><span>ar</span></span>e available for you to review now. The answers will become available after the lecture.</p>
+<p>Following feedback in last week's tutorial, I will assume that  most of you will be able to access the questions tomorrow from you laptop or smart <span><span>phon</span></span>e <span><span>o</span></span>r tablet. However, I will bring along a few hard copies <span><span>o</span></span>f the two questions.</p>
+<p>Stewart</p>
+<br/></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553912_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Requirements engineering in the 21st century: preparing for next week 's tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 23 October 2015 08:21:12 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>On the module we <span><span>ar</span></span>e going to cover r<span><span>equirements</span></span> engineering in the 21<span><span>st</span></span> century in two sessions: first, next week in the lecture and tutorial; and second, in the final week of term.</p>
+<p>Next week, in the lecture, I  will introduce four 21<span><span>st</span></span> century requirements engineering methods including writing user stories, which <span><span>ar</span></span>e part of Agile methods like Scrum, and also construction by configuration (off-the-shelf).</p>
+<p>In <span><span>th</span></span>e tutorial we <span><span>w</span></span>ill focus upon construction by configuration and I <span><span>w</span></span><span><span>ould</span></span> like you to prepare for this by <span>reading the first four sections (5 and a bit pages) of Ian Sommerville's </span>paper "Construction by Configuration: Challenges for Software Engineering R<span><span>esearch</span></span> and <span><span>Pra</span></span><span><span>ctice</span></span>" This paper is on Blackboard in "Week 6: Core material: Tutorial". there <span><span>ar</span></span>e some questions there too for you to consider as you read through <span><span>th</span></span>is paper.</p>
+<p>In <span><span>th</span></span>e last week of term, a guest speaker, Andy Mason from Intel, will present a lecture <span><span>o</span></span>n real-company Agile practices and this will be followed by a workshop that he <span><span>w</span></span>ill facilitate involving group work on writing user stories.</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553913_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Forums</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 22 October 2015 15:51:52 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I have created a number of forums on various aspects of the module, for example the exam, the Contextual Design approach, and so on. You get to the forums by way of Course Tools and then the Discussion Board. You can post to any of these forums. If you do post a question or observation, then everyone will see it and everyone will see my response to it. So it's an efficient way of sharing knowledge.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553914_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 5 tutorial preparation</h3>
+<div class="details">
+<p><span>Posted on: Friday, 16 October 2015 08:48:17 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>In next week's lecture I will introduce Contextual Design, which you can consider as a form of economical, practical ethnography.</p>
+<p>The tutorial will be in two parts: first: reviewing a paper on the 7 contextual design work models; second: practice <span><span>i</span></span>n creating a<span><span>ffinity</span></span> diagrams (group work).</p>
+<p>For <span><span>th</span></span>e first part, I <span><span>woul</span></span>d like you to read critically before <span><span>th</span></span>e tutorial  the document in "Work models.<span><span>pdf</span></span>"and answer the associated questions "Contextual Design Tutorial Questions". The "Work Models.<span><span>pdf</span></span>" document is on Blackboard in "Week 5: Core material: Tutorial one: Reading: Work models"</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553915_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Field Trip to Bletchley Park</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 15 October 2015 15:09:59 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>     just in case you have not been made <span><span>awar</span></span>e of this through other channels, there will be a Field Trip to <span><span>Bletchley</span></span> Park, where Alan Turing and <span><span>hs</span></span> colleagues <span><span>cracke</span></span>d the Enigma code during World War II. The trip has been  heavily subsidised - so is very cheap - and includes entrance to the Museum.</p>
+<p>You can <span style="text-decoration: underline;"><strong>book your place</strong> </span>on the <span><span>Bletchley</span></span> Park trip by accessing <span><span>th</span></span>e following link:</p>
+<p><span style="color: #1f497d; font-family: 'Calibri','sans-serif'; font-size: 12pt;"><a href="http://store.uwe.ac.uk/browse/product.asp?compid=1&amp;modid=1&amp;catid=789"><span style="color: purple;">http://store.<span><span>uwe</span></span>.<span><span>ac</span></span>.<span><span>uk</span></span>/browse/product.asp?<span><span>compid</span></span>=1&amp;<span><span>modid</span></span>=1&amp;<span><span>catid</span></span>=789</span></a></span></p>
+<p><span style="color: #1f497d; font-family: 'Calibri','sans-serif'; font-size: 12pt;">Stewart</span></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553916_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        The ATC study from the ethnographers' persepctive</h3>
+<div class="details">
+<p><span>Posted on: Monday, 5 October 2015 08:25:48 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>I have added links to two papers on the AC case-study written from the perspective of the ethnographers. They are in the "Optional material" folder for Week 2.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553917_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Driverless trains</h3>
+<div class="details">
+<p><span>Posted on: Saturday, 3 October 2015 15:49:30 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>I have added a link to a discussion of the issues surrounding <span><span>th</span></span>e possible introduction of fully <span><span>driverless</span></span> trains in the UK. It's in <span><span>th</span></span>e Optional Material folder for Week 2 material.</p>
+<p><br>Stewart</br></p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553918_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 3: Tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 2 October 2015 10:07:47 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>The Week 1 <span>tutorial introduced Checkland's "served </span>system" concept and his method <span><span>o</span></span>f "organisational analysis" for conceptualising a served system. This week's tutorial (Week 2 tutorial) has explored another <span><span>m</span></span><span><span>ethod</span></span> of understanding the served system: ethnography. And <span><span>m</span></span>y indicative answers to the tutorial questions are now available for you to review. In next week's lecture, I <span><span>wil</span></span>l introduce the goal-oriented a<span><span>pproach</span></span> to requirements engineering. This method conceptualises a <span><span>servde</span></span> s<span><span>ystem</span></span> in terms <span><span>o</span></span>f its stakeholders goals. One of the advantages <span><span>o</span></span>f this approach is that it encourages the identification and exploration of more than one computer-based solution that will satisfy stakeholders' goals. This raises <span><span>th</span></span>e problem of how to choose between solutions: which solution is best?</p>
+<p>For next Thursday's tutorial, I <span><span>woul</span></span>d l<span><span>ike</span></span> you to read critically the paper, "Exploring Alternatives During Requirements Analysis" which is in the "Week 3: Tutorial" folder in an item called "Tutorial 3: Reading". This paper tries to address <span><span>th</span></span>e problem mentioned above. As you read the paper, try to answer the questions in the item "Tutorial 3: Questions" in a file named "Goal-oriented RE tutorial questions.<span><span>docx</span></span>."</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553919_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment ESSAY:Essay (1000 Words)</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 1 October 2015 08:00:04 o'clock BST</span></p>
+<p></p><div class="vtbegenerated">Assignment ESSAY:Essay (1000 Words) will accept submissions from 15-Oct-2015 00:00:00. Submissions must be received before 29-Oct-2015 14:00:00 to be on time.</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Blackboard (Please do not reply)</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553920_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Assignment</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 29 September 2015 09:54:46 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>The assignment is now available. It is worth 25% of the assessment of this module. The submission date is the 29th of October. Another folder will be automatically added under the "Assignments" tab soon; it will contain a mechanism for uploading your assignment to Blackboard for marking.</p>
+<p>Regards</p>
+<p>Stewart</p>
+<br/></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553921_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Preparation for the week 2 tutorial session</h3>
+<div class="details">
+<p><span>Posted on: Friday, 25 September 2015 07:56:43 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>To <span><span>prepar</span></span>e for next week's tutorial session, please read critically the paper "Cooperative Systems Design" by Ian <span><span>Sommerville</span></span>. You will find it on Blackboard <span><span>i</span></span>n the  Week 2:Core material:Tutorial:Tutorial 2 Reading item. As you read through it, try to answer the questions in the Tutorial 2 Questions item; these are in <span><span>th</span></span>e file "<span><span>Sommerville</span></span>'s Ethnography paper questions".</p>
+<p>In the Week 1:Core material: Tutorial, you should now find an item containing my view of the key <span><span>points</span></span> of the C<span><span>heckland</span></span> paper that <span><span>w</span></span>e discussed <span><span>yeterday</span></span>.</p>
+<p>Stewart </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553922_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Welcome to my Requirements Engineeirng module: UFCFM6-15-3</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 22 September 2015 10:08:46 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Welcome to the undergraduate Requirements Engineering module (UFCFM6-15-3).</p>
+<p>The module is presented in three main sections: elicitation of requirements; modelling and documenting requirements; and transforming requirements into designs.</p>
+<p>The module will be presented in a series of lectures and accompanying tutorials. I will be making the material available as the module proceeds. In the <strong>lectures, </strong>I will introduce key topics in requirements engineering, like requirements engineering in the 21st century. In some <strong>tutorial sessions</strong> we will discuss critically journal papers and book chapters. You will need to read and critically review each paper or chapter before attending the associated tutorial. In other tutorial sessions, you will tackle problems associated with the lecture topic for that week. Normally you will work in small groups.</p>
+<p>You will find a <strong><span style="text-decoration: underline;">schedule</span></strong> for the module in the Schedule section. You should familiarise yourself with this now.</p>
+<p>There is a link to the <strong><span style="text-decoration: underline;">specimen examination paper</span></strong> in the Week12 material.</p>
+<p>Each week, some information will only appear on Blackboard after the tutorial for that week has  taken place, so you should check this site regularly.</p>
+<p><br>The essential textbook for this course is: Requirements Engineering: Processes and Techniques by Kotonya and Sommerville, published by John Wiley.</br></p>
+<p>Stewart (September 22nd, 2015) </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553923_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Revision advice</h3>
+<div class="details">
+<p><span>Posted on: Monday, 8 June 2015 13:06:39 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>All of the material that we covered in the course is available to you on this site. I advise you to actively revise this material.</p>
+<p>In addition, in the "Week 12: managing changing requirements and revision" folder, you will find both the specimen exam paper with model answers for some of the questions, as well as a revision sub folder containing a presentation on revision. I advise you to study all of this material carefully.</p>
+<p>Good luck</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553924_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Changes to the module planned for 2015-16</h3>
+<div class="details">
+<p><span>Posted on: Friday, 19 December 2014 11:03:50 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I have created a new tab: "Feedback on the module". In it I have put a report based upon the feedback on the 2014-15 run of the module that you gave to me during module review week.</p>
+<p>Section 6 contains the changes to the module that I have planned for its 2015-16 module run.</p>
+<p>Any feedback you have on the report would be welcome.</p>
+<p>Stewarta</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553925_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Requirements Engineering research</h3>
+<div class="details">
+<p><span>Posted on: Friday, 19 December 2014 10:59:54 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Here is a link to a recent workshop on requirements engineering research. The link gives access to presentations on the research. You may like to read them just to see what research in this area looks like.</p>
+<p><a href="http://www.resg.org.uk/best-of-resg-research-2014/">http://www.resg.org.uk/best-of-resg-research-2014/</a></p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553926_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Learning UML 2.0 eBook now available; and a topic not in the exam</h3>
+<div class="details">
+<p><span>Posted on: Friday, 12 December 2014 16:13:18 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>The book "Learning UML 2.0" by Miles and Hamilton that I have recommended a number of times  is now available from the UWE library as an eBook.</p>
+<p>I have mentiond to everyone who attended the last week's lecture and tutorial that there will not be a question in either the exam or the resit exam on transforming a use case specification and class diagram to a sequence diagram by doing design. So if, during your revision, you find the tutorial on this topic in week 10 difficult, don't worry.</p>
+<p>Stewart</p>
+<p> </p>
+<p> </p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553927_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Preparing for th January exam</h3>
+<div class="details">
+<p><span>Posted on: Friday, 12 December 2014 16:00:23 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    if you missed the last week's  lecture or tutorial, you need to know that in the folder for Week 12 on Blackboard there is a specimen examination paper and a set of model answers. The model answers include information about how I tend to mark components of questions so it is worth you having a look at.</p>
+<p>In addition, in the same folder, there is a presentation that includes a one page outline of each of the lectures and each of the tutorials. This presentationn also contains some advice abut the kind of questions I tend to ask and how to go about answering them.</p>
+<p>My advice to you is that you need to revise all of the "Core" material - lectures and tutorial - for all of the twelve weeks. If you are interested in particularr areas, then you could also look at the "Optional" material.</p>
+<p>If you have missed a lot of lectures and tutorials, you can still get to grips with the module's content by studying the lecture notes, viewing any associated videos, tackling the tutorial questions and reviewing the indicative solutions.</p>
+<p>Despite this work, I hope that you still manage to have an enjoyable Christmas.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553928_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        eBook on UML use cases and activity diagrams</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 9 December 2014 10:02:34 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>In the next one or two days the library is making available the eBook "Learning UML 2.0" by Miles and Hamilton.</p>
+<p>This has good chapters covering use cases and activity diagrams and sequence diagrams.</p>
+<p>The book may also help with the design part of your computing projects.</p>
+<p>Stewart</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553929_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Pre tutorial work</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 9 December 2014 09:58:44 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>In one half of this week's tutorial I will ask you to have a go at an exercise in moving from requirements to design by creating a sequence model from a use case. To prepare for this, you are advised to revise the week 10 lecture on "From requirements to design" and either bring along a hard copy of the lecture slides, or have good access to it via smart phone or tablet or laptop in the tutorial.</p>
+<p>For the other half of the lecture, we will look at questions one and two  from the specimen exam paper. So you are advised to have a go at these questions before you attend the tutorial.</p>
+<p>Stewart</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553930_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Specimen Exam paper</h3>
+<div class="details">
+<p><span>Posted on: Monday, 8 December 2014 11:53:55 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>There is a new specimen exam paper in the material for week 12 of the module. We will start to go over this later in the week.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553931_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module Evaluation</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 4 December 2014 09:45:18 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">This is your opportunity to tell us what you think about UFCFM6-15-3 - Requirements engineering 14sep_fr-tb1_jun15_1.  A short <a href="https://blackboard.uwe.ac.uk/webapps/portal/frameset.jsp?tab_tab_group_id=_2_1&amp;url=%2Fwebapps%2Fuwe-uwesurvey-bb_bb60%2Fdosurvey.html%3Fcourse_id%3D_242460_1%26content_id%3D_3980354_1" target="_parent">Module Evaluation</a> is now available to complete.  The module evaluation for UFCFM6-15-3 - Requirements engineering 14sep_fr-tb1_jun15_1 will remain available until <b>13/06/2015</b>. Your feedback is essential as it helps us to improve module teaching and support. Information gathered will be shared in Student Rep Staff Forums (SRSF) and reported through University processes to improve the student experience.<br> <br>Guidance on completing the module evaluation is available on the <a href="http://info.uwe.ac.uk/online/Blackboard/students/guides/evaluation.asp" target="_blank">Blackboard Support website</a>.<br/></br></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553932_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module feedback week</h3>
+<div class="details">
+<p><span>Posted on: Friday, 28 November 2014 16:43:23 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Next week is "module review week". So in each of the three tutorials I will ask you to work in groups for about 20 minutes in order to identify the following: </p>
+<p>1. The most effective part(s) of the module so far</p>
+<p>2. The msot challenging aspect(s) of the module so far</p>
+<p>3. Any enhancements that you would recommendthat  I should make to either the content or the delivery of the module or to both.</p>
+<p>We will aslo be having some practice in doing design based upon a domain class model and a use case specification.</p>
+<p>Stewart</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553933_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        How to catch up</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 20 November 2014 10:39:02 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    if you have missed one or more lectures or tutorials, you will need to catch up with what you have missed, otherwise you may not be able to pass the exam.</p>
+<p>All of the material for all of the lectures and tutorials is on BlackBoard. Generally, for tutorial problems, you will also find indicative solutions.</p>
+<p>Most of the weeks' material is organised in either a Core folder, which contains the lecture and tutorial material, and an Optional folder, which contains additional material. You need to be familiar with all of the Core material. By the end of the term, alll 12 weeks will be organised in this way</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553934_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial in the week beginning 3rd of November</h3>
+<div class="details">
+<p><span>Posted on: Friday, 31 October 2014 16:46:11 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>For the tutorial in the week beginning the 3rd of November, please read critically, and make notes on, the first three sections of the paper "Construction by Configuration: Challenges for Software Engineering Research and Practice", i.e. sections 1 to 3.</p>
+<p> Strewrta</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553935_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Agile practices in the enterprise</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 30 October 2014 16:15:09 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    if you attended the lecture today, I would be every grateful if you could provide me with feedback on both Richard's presentation and on his user-story writing exercise.</p>
+<p>For example, did you find the presentation interesting or dull, relevant to requirements engineering or not, too long or too short or just the right length?</p>
+<p>And again, did you understand the story-writing exercise? Was it interesting or dull ? Enjoyable  or not? Useful for your understanding of requirements engineering or not, and so on?</p>
+<p>If you didn't attend, I recommend that you look on Blackboard at Week 5:Core Material: Lecture:Intel Material: Presentation on agile practices and user-story writing. This is where the presentation is located.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553936_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tomorrow's lecture</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 29 October 2014 13:18:38 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>In tomorrow's lecture, we will be having a guest speaker from Intel Ltd., a micro-processor development company. He will be giving a talk on agile software development practices,  in particular on the Scrum method. He will follow this with a workshop on user stories.</p>
+<p>Please can you bring along either a tablet, or a laptop, or a pencil or pen and paper to the lecture.</p>
+<p>Stewart</p>
+<p> </p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553937_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 5 tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 17 October 2014 17:15:02 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I am not asking you to read anything in particular for the Week 5 tutorials (on 23/10 and 24/10). However, the tutorials will take place and I will bring along any material that we need.</p>
+<p>In two weeks' time, on the 30th of October, the two-hour lecture will be presented by a expert from Intel Ltd. on Agile software development. He will give presentation on Agile development methods with an emphasis on the requirements engineering component. In addition he will facilitate a practical session on writing Agile user stories.</p>
+<p>Regards</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553938_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Navy blue windcheater</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 16 October 2014 15:56:12 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    if you left a navy blue wind in 4Q4 after our lecture on Thursday I have it in my office 2p32 from where you can collect it.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553939_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 3: tutorial questions and answers</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 14 October 2014 10:10:03 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    I have added an item containing the questions we discussed in the week three tutorial on goal-oriented analysis. The item includes indicative answers.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553940_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 4 work</h3>
+<div class="details">
+<p><span>Posted on: Friday, 10 October 2014 16:21:24 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>     In the two hour lecture next week (Week 4), I will present the i* goal-oriented modelling language in the first part of the lecture; then, in part two of the lecture, you will work in pairs on modelling two scenarios as Strategic Dependency models; and in part three, you will model a scenario requiring you to create a Strategic Rationale model.</p>
+<p>    For next week's tutorial, I would like you to prepare by reading critically the "Tutorial 5: Reading: Work models" item, which you can find in the Week 5 folder on Blackboard. In week 5, we will cover Contextual Design, an economic form of ethnography, to which the work models belong.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553941_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Application of a goal-oriented approach</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 9 October 2014 15:47:08 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    following on from the lecture, I have added a section of a paper that describes the application by Loucopoulos and Kavakli of a goal-oriented approach to an Air Traffic Control enterprise.</p>
+<p>You do not need to read it, but if you are interested in goal-oriented approaches, you may find it interesting.</p>
+<p>Stewart </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553942_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        This week's reading</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 7 October 2014 13:34:01 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Just in case there is any confusion, you should find that this week's reading for the tutorials on Tuhrsday and Friday is five pages long and is entiled "Exploring Alternatives during Requirements Analysis". It's by John Mylopoulos et al.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553943_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Week 3 tutorial preparation</h3>
+<div class="details">
+<p><span>Posted on: Friday, 3 October 2014 09:40:39 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>   so far in the lectures the key concepts and processes of requirements engineering has been introduced and the tutorials have covered two ways of characterising the served system: Checkland's organisational analysis and the ethnographic approach. Next week's (week 3) lecture and tutorial will focus upon another method for characterising or conceptualising the served system: the goal oriented approach.</p>
+<p>In order to prepare for the tutorial please read critically and make notes on the Tutorial 3 reading, which is located in Bb in the Week 3 folder. To access it, click the link and then:</p>
+<p>Follow the "Connect" link and then enter "Exploring Alternatives during Requirements Analysis" into the search engine.</p>
+<p>Stewart</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553944_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial time change</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 1 October 2014 08:12:05 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>     I have been informed that the tutorial T/01, which used to start at 1700h on a Thursday, has been moved to 3Q84 on Friday mornings starting at 1300h. I apologise for the short notice on this, but I was only informed about it last night.</p>
+<p>It is very important that you attend the correct tutorial group in order to keep the numbers in each group the same and thus facilitate learning.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553945_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        FAO Taylor's College students</h3>
+<div class="details">
+<p><span>Posted on: Monday, 29 September 2014 10:10:29 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    if you are a Taylor's College student on Software Engineering or Forensic Computing and Security, can you email me if you cannot "see" this module (UFCFM6-15-3, Requirements Engineering) on Blackboard, i.e. if you do not have access to this module's material.</p>
+<p>Thanks</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553946_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial groups: no need to email me now</h3>
+<div class="details">
+<p><span>Posted on: Monday, 29 September 2014 09:40:05 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    your reallocation to one of three tutorial groups has occurred, so no need to email me about it now.</p>
+<p>But do check your timetables to see which one you should be in.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553947_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial groups</h3>
+<div class="details">
+<p><span>Posted on: Monday, 29 September 2014 08:01:43 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>     the cohort has been split into three tutorial gropups. Can you email me if you are in the group that starts at 1000h or 1130h.</p>
+<p>Thanks</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553948_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        What to read for the tutorialon Thursday the 2nd of october</h3>
+<div class="details">
+<p><span>Posted on: Friday, 26 September 2014 11:02:18 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>For the tutorial on Thursday the 2nd of October, you should read critically, and make notes on, the paper</p>
+<p>Cooperative Systems Design. You can access this on Blackboard in "Week2 -&gt; Tutorial 2: Reading".</p>
+<p>All of the material in Week One is now available; this includes summaries of the tutorial paper we discussed on the 25th.</p>
+<p>Week 3 material is available.</p>
+<p>I found a usb and extension lead after the lecture yesterday. If anyone owns it and would like to claim it, I am in 2P32.</p>
+<p>I have asked for three tuorial groups to be set up for next week. I will keep you informed on progres on this.</p>
+<p>Stewart</p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553949_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Problem accessing this week's tutorial paper</h3>
+<div class="details">
+<p><span>Posted on: Monday, 22 September 2014 14:45:18 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>I am expecting to have this problem fixed either late this afternoon or ealry tomorrow morning.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553950_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Accessing the tutorial paper</h3>
+<div class="details">
+<p><span>Posted on: Monday, 22 September 2014 10:50:05 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>A student has reported a problem accessing the tutorial paper. I am investigating this. Please contact me if you HAVE SUCCESSFULLY accessed th etutorialpaper.</p>
+<p>Thanks</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553951_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial reading for the 25th of September</h3>
+<div class="details">
+<p><span>Posted on: Monday, 22 September 2014 09:45:04 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>Please read the selected sections form the paper "A role for soft systems" which you will find in the Week 1 material for the Requirements Engineering module on Blackboard.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553952_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Welcome to the Requirements Engineering module</h3>
+<div class="details">
+<p><span>Posted on: Monday, 22 September 2014 09:42:49 o'clock BST</span></p>
+<p></p><div class="vtbegenerated">
+<p>Welcome to the undergraduate Requirements Engineering module (UFCFM6-15-3). <br><br>The module will be presented in a series of lectures and accompanying tutorials. I will be making the material available as the module proceeds. In the <strong>lectures, </strong>I will introduce key topics in requirements engineering, like requirements engineering in the 21st century. In some <strong>tutorial sessions</strong> we will discuss critically journal papers and book chapters. You will need to read and critically review each paper or chapter before attending the associated tutorial. In other tutorial sessions, you will tackle problems associated with the lecture topic for that week. Normally you will work in small groups.</br></br></p>
+<p>You will find a <strong><span style="text-decoration: underline;">schedule</span></strong> for the module in the Schedule section. You should familiarise yourself with this now.</p>
+<p>There is a link to the <strong><span style="text-decoration: underline;">specimen examination paper</span></strong>. Each week, some information will only appear on Blackboard after the tutorial for that week has  taken place, so you should check this site regularly.<br><br>The essential textbook for this course is: <br>Requirements Engineering: Processes and Techniques by Kotonya and Sommerville, published by John Wiley.</br></br></br></p>
+<p>Stewart (September 22nd, 2014) </p>
+</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553953_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module Evaluation</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 5 December 2013 12:53:50 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">This is your opportunity to tell us what you think about UFCE4S-10-3 - Requirements engineering 13sep_fr-tb1_jun14_1.  A short <a href="https://blackboard.uwe.ac.uk/webapps/uwe-uwesurvey-bb_bb60/dosurvey.html?course_id=_229418_1&amp;content_id=_3496366_1">Module Evaluation</a> is now available to complete.  The module evaluation for UFCE4S-10-3 - Requirements engineering 13sep_fr-tb1_jun14_1 will remain available until <b>13/06/2014</b>. Your feedback is essential as it helps us to improve module teaching and support. Information gathered will be shared in Student Rep Staff Forums (SRSF) and reported through University processes to improve the student experience.<br> <br>Guidance on completing the module evaluation is available on the <a href="http://info.uwe.ac.uk/online/Blackboard/students/guides/evaluation.asp" target="_blank">Blackboard Support website</a>.<br/></br></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553954_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Next week's lecture and tutorial</h3>
+<div class="details">
+<p><span>Posted on: Friday, 25 October 2013 09:05:18 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>For next week review the lecture six presenation and critically read the first three sections of the Tutorial 6 reading (you should be able to access it now). In particular, consider whether you agree with Sommerville's assessment of the impact of the approach presented in the tutorial reading on the quality of requirements engineering possible using the approach.</p>
+<p>Optionally , you may want to look at the other three pieces of material: two on the agile approach called SCRUM and one on a  tutorial on modern approaches to requirements engineering.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553955_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Tutorial 3: Reading</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 3 October 2013 13:46:40 o'clock BST</span></p>
+<p></p><div class="vtbegenerated">
+<p>The reading for next week's tutorial is labelled Tutorial 3: Reading.</p>
+<p>The title of the paper is: "Exploring Alternatives during Requirements Analysis" by Mylopoulos et al.</p>
+<p>You need to read this paper critically.</p>
+<p>This paper focuses upon one of the key advantages of goal-oriented requirements engineering viz its intrinsic characteristic of being able to support the generation of alternative solutions. It also slightly extends the approach introduced in the lecture and you should consider how successful this extension is.</p>
+<p>Follow the "Connect" link and then enter "Exploring Alternatives during Requirements Analysis" into the search engine.</p>
+<p>Stewart</p>
+<p> </p>
+</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553956_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Module evaluation</h3>
+<div class="details">
+<p><span>Posted on: Friday, 14 December 2012 09:50:34 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Have you received an email today concerning module evaluation?</p>
+<p>If you have can you let me know at <a href="mailto:stewart.green@uwe.ac.uk">stewart.green@uwe.ac.uk</a></p>
+<p>If you eventually recieve one can you let me know.</p>
+<p> </p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553957_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Rate Your Modules – Module Evaluation</h3>
+<div class="details">
+<p><span>Posted on: Friday, 14 December 2012 09:46:36 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">This is your opportunity to tell us what you think about your modules.  A short <a href="https://blackboard.uwe.ac.uk/webapps/uwe-uwesurvey-bb_bb60/dosurvey.html?course_id=_209817_1&amp;content_id=_3091706_1">Module Evaluation</a> is now available to complete.  The module evaluation will remain available until <b>17/05/2013</b>. Your feedback is essential as it helps us to improve module teaching and support. Information gathered will be shared in Student Rep Staff Forums (SRSF) and reported through University processes to improve the student experience.<br> <br>Guidance on completing the module evaluation is available on the <a href="http://info.uwe.ac.uk/online/Blackboard/students/guides/evaluation.asp" target="_blank">Blackboard Support website</a>.<br/></br></br></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553958_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Intel SCRUM Presentation</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 13 December 2012 16:46:50 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>I have added to the Course Materials on BlackBoard the presentation used by the team from Intel who ran the workshop on SCRUM.</p>
+<p>If you attended the workshop, could you provide me with your thoughts on it. I would be particularly interested to know if you found the material covered valuable, whether you thought it was well presented, whether you found the format and timing of the two hours (75% presentation 25% questions) was ok, and whether you have any suggestions for improving this workshop, as I plan to invite them next year too.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553959_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Exam preparation</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 13 December 2012 13:51:56 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>There is a secimen examination paper and revision documents for both halves of the module accessible from the Course Documents tab on BlackBoard.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553960_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Contextual Design company</h3>
+<div class="details">
+<p><span>Posted on: Thursday, 13 December 2012 09:00:11 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>You may like to look at some contemporary case studeis involving the use of contextual design at <a href="http://incontextdesign.com/work/">http://incontextdesign.com/work/</a></p>
+<p> </p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553961_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Core Lectorial 5 &amp; next week's rooms</h3>
+<div class="details">
+<p><span>Posted on: Friday, 7 December 2012 16:16:08 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated">
+<div class="vtbegenerated">
+<div class="vtbegenerated">
+<div class="vtbegenerated">
+<div class="vtbegenerated">
+<p>The fifth of five lectorials given by Andy Gillies on the Controlled Requirements Expression (CORE) approach to requirements engineering is now available on Blackboard.</p>
+<p>Next week, the Requirements Engineering Lectorial will be between 1400h and 1600h on Thursday the 13th in 4Q51. It will be preceded by a revision session from 1300h to 1400h in 4Q69.</p>
+<p>Stewart</p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553962_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Revision session 13/12/12 1300h 4Q69</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 5 December 2012 09:59:49 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>     I will give my revsion session for this module in 4Q69 starting at 1300h nextThursday, the 13th of December.</p>
+<p> </p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553963_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Revision session</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 5 December 2012 07:52:54 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>I have to postpone my half of today's revison session because I am teaching at that time. Andy will be taking you for revison from 1200h. I will cover my revision next Thursday at 1300h. I will inform you of the room shortly.</p>
+<p>Apologies</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553964_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        CORE lectorial 4: transcript available</h3>
+<div class="details">
+<p><span>Posted on: Monday, 3 December 2012 09:42:09 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>The transcript for the 4th lectorial on CORE is now available on Blackboard.</p>
+<p> </p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553965_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        CORE Lectorial 3 transcript available</h3>
+<div class="details">
+<p><span>Posted on: Friday, 23 November 2012 09:22:00 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>The transcript for  the third lectorial on CORE is now available in Blackboard.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553966_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Transcript of CORE Lectorial 2 now available</h3>
+<div class="details">
+<p><span>Posted on: Monday, 12 November 2012 08:40:23 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>Hi,</p>
+<p>    the transcript of CORE lectorial 2 is now available from Blackboard.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553967_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        SCRUM a talk from Intel staff</h3>
+<div class="details">
+<p><span>Posted on: Friday, 9 November 2012 09:08:46 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>There has been a change to the schedule. In the penultimate week of term Andy and I will use the Wednesday slot to cover revision for the module. In the last week of term the lectorial will revert to Thursday (13th December) in 4Q51 from 1400h to 1600h.</p>
+<p>This final lectorial will given by a small team of guest lecturers from Intel (<a href="http://www.intel.com/content/www/us/en/company-overview/company-overview.html?iid=hdr+about">http://www.intel.com/content/www/us/en/company-overview/company-overview.html?iid=hdr+about</a>), who will talk about the agile method SCRUM and, in particular, about SCRUM's impact on requirements engineering.</p>
+<p>the structure of the lectorial will be as follows:</p>
+<ul>
+<li><span style="color: #1f497d;">Intro</span></li>
+<li><span style="color: #1f497d;">What is Agile</span></li>
+<li><span style="color: #1f497d;">Brief history </span></li>
+<li><span style="color: #1f497d;">Agile vs. Waterfall</span></li>
+<li><span style="color: #1f497d;">What is SCRUM</span>
+<ul>
+<li><span style="color: #1f497d;">Roles and responsibilities</span></li>
+</ul>
+</li>
+<li><span style="color: #1f497d;">Lifecycle</span>
+<ul>
+<li><span style="color: #1f497d;">Walk through the lifecycle</span>
+<ul>
+<li><span style="color: #1f497d;">Gathering requirements </span></li>
+<li><span style="color: #1f497d;">Programming (XP)</span>
+<ul style="list-style-type: disc;">
+<li><span style="color: #1f497d;">Sizing stories (e.g. planning poker)</span></li>
+</ul>
+</li>
+<li><span style="color: #1f497d;">Stakeholder management etc.</span></li>
+</ul>
+</li>
+<li><span style="color: #1f497d;">Sizing stories</span>
+<ul>
+<li><span style="color: #1f497d;">E.g. Planning Poker</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="color: #1f497d;">Open Q &amp; A</span></li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553968_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Transcript of CORE Lectorial 1 available</h3>
+<div class="details">
+<p><span>Posted on: Tuesday, 6 November 2012 15:00:54 o'clock GMT</span></p>
+<p></p><div class="vtbegenerated"><p>The transcript of the first lectorial on CORE is now available on Blackboard.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553969_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Transcript of lectorial notes</h3>
+<div class="details">
+<p><span>Posted on: Friday, 26 October 2012 12:44:30 o'clock BST</span></p>
+<p></p><div class="vtbegenerated"><p>One of your fellow students, Michael, will be sending me  transcripts of the notes taken by a scribe at the remaining lectorials. I will make these transcripts available to you on blackboard as and when they arrive.</p>
+<p>Stewart</p></div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+<!-- showOnCourses can be true only for system announcements -->
+<li class="clearfix" id="_553970_1">
+<h3 class="item" style="color:#000000; cursor: default; background: transparent">
+				        Welcome to the module</h3>
+<div class="details">
+<p><span>Posted on: Wednesday, 26 September 2012 12:08:28 o'clock BST</span></p>
+<p></p><div class="vtbegenerated">
+<p>Welcome to the undergraduate Requirements Engineering module (UFCE4S-10-3). <br><br>The module will be presented in two halves. For the first half, in the <strong>lectures </strong>I will introduce key topics in requirements engineering, like requirements engineering in the 21st century. In the <strong>tutorial sessions</strong> we will present and discuss journal papers and book chapters on the theme of the importance of defining the served system before the serving system. You will need to read and critically review each paper or chapter before attending the associated tutorial.</br></br></p>
+<p>In the second half of the module, Andy Gillies, will present a key requirements engineering method called CORE (COntrolled Requirements Expression).</p>
+<p>You will find a <strong><span style="text-decoration: underline;">schedule</span></strong> for the module in the Schedule section. You should familiarise yourself with this now.</p>
+<p>There is a link to the <strong><span style="text-decoration: underline;">specimen examination paper</span></strong> for the module in the Course Documents section, which also contains revision notes.</p>
+<p>Some information will only appear on Blackboard after certain dates have passed, so you should check this site regularly.<br><br>The essential textbook for this course is: <br>Requirements Engineering: Processes and Techniques by Kotonya and Sommerville, published by John Wiley.</br></br></br></p>
+<p>Stewart (September 26th, 2012) </p>
+</div><p></p>
+</div>
+<div class="announcementInfo">
+<p><span>Posted by:</span> Stewart Green</p>
+<p><span>Posted to:</span> UFCFM6-15-3 - Requirements engineering 16sep_1</p>
+</div>
+</li>
+</ul>
+</input></input></input></input></input></input></input></input></input></input></form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- This js binds a Kaltura function to the dom:loaded event -->
+<script type="text/javascript">
+Event.observe(document, "dom:loaded", function() {
+ addCourseIdToUrl();
+});
+function addCourseIdToUrl () {
+var bbCourseIdForKaltura = getSpecificParam("course_id");
+var bbContentIdForKaltura = getSpecificParam("content_id");
+var refs = document.querySelectorAll('a.lb');
+for (i = 0; i < refs.length; i++) {
+ if (refs[i].href.indexOf("/LtiMashupPlayIframeWrapper?playUrl=/browseandembed") != -1)
+  refs[i].href = refs[i].href + "&course_id=" + bbCourseIdForKaltura + "&content_id=" + bbContentIdForKaltura;
+   }
+}
+function getSpecificParam (paramString) {
+var query = window.location.search.substring(1);
+var vars = query.split("&");
+for (var i = 0; i < vars.length; i++) {
+ var pair = vars[i].split("=");
+ if (pair[0] === paramString) return pair[1];
+   }
+}
+</script>
+<script type="text/javascript">page.bundle.addKey('inlineconfirmation.close','Close');page.bundle.addKey('inlineconfirmation.refresh','Refresh');page.bundle.addKey('hidden.link.close.menu','End of menu. Click to return to associated item.');page.bundle.addKey('hidden.link.close.form','End of form. Click to return to associated item.');page.bundle.addKey('lightbox.loading','Loading...');page.bundle.addKey('yt.stopped','Stopped:');page.bundle.addKey('yt.playing','Playing:');page.bundle.addKey('yt.cued','Cued:');page.bundle.addKey('yt.buffering','Buffering:');page.bundle.addKey('yt.paused','Paused:');page.bundle.addKey('yt.ended','Ended:');page.bundle.addKey('yt.play','Play');page.bundle.addKey('yt.pause','Pause');page.bundle.addKey('yt.mute','Mute');page.bundle.addKey('yt.unmute','Unmute');page.bundle.addKey('lightbox.overlay','{0} has been opened as a lightbox overlaying the current page.');page.bundle.addKey('display.playerControls','Player Controls');page.bundle.addKey('display.videoPlayerControls','Video Player Controls');page.bundle.addKey('display.play','Play');page.bundle.addKey('display.stop','Stop');page.bundle.addKey('display.volumeUp','Volume Up');page.bundle.addKey('display.volumeDown','Volume Down');page.bundle.addKey('display.mute','Mute');page.bundle.addKey('display.videoStatus','Video Status');page.bundle.addKey('display.closePlayerControls','Close Player Controls');page.bundle.addKey('display.embeddedVideoPlayer','Embedded Video Player');page.bundle.addKey('display.of','of');page.bundle.addKey('display.view.on.flickr','View Photo on Flickr');page.bundle.addKey('mashups.content.data.msg','We are unable to display the mashup content. This happens if the system detects an invalid URL. Remove the mashup item and try again to resolve this issue.');page.bundle.addKey('contextmenu.frame.title','Menu frame');page.bundle.addKey('frameset.contentframe.title','Content');page.bundle.addKey('common.pair.paren','{0} ({1})');page.bundle.addKey('announcement.delete.announcement.warning','The action is final and cannot be undone. Delete this item?');page.bundle.addKey('coursemenu.show','Show Course Menu');page.bundle.addKey('coursemenu.hide','Hide Course Menu');page.bundle.addKey('dynamictree.expand','Expand');page.bundle.addKey('dynamictree.collapse','Collapse');page.bundle.addKey('dynamictree.expand.folder','Expand {0} tree folder');page.bundle.addKey('dynamictree.collapse.folder','Collapse {0} tree folder');page.bundle.addKey('dragdrop.accessible.error.chooseOption','Select an item first.');page.bundle.addKey('dragdrop.accessible.empty','No items available to reposition.');page.bundle.addKey('dragdrop.accessible.complete','Items have been reordered.');page.bundle.addKey('dragdrop.accessible.complete.nochange','No ordering changes made.');page.bundle.addKey('closeStr','Close');page.bundle.addKey('moreOptionsStr','Click to see options');page.bundle.addKey('hiddenStr','This link is hidden from students');page.bundle.addKey('emptyStr','This link has no content');page.bundle.addKey('entryPointChangeConfirmStr','The entry point will be changed to the next available Content');page.bundle.addKey('subheaderColonStr','Subheader {0}');page.bundle.addKey('confirmQuickEnrollStr','You will be given the role: {0}. Proceed?');page.bundle.addKey('enterSearchKeyStr','Enter Search Criteria.');page.bundle.addKey('courseWelcomePageLbTitle','Quick Setup Guide');page.bundle.addKey('expandCollapse.expand.section.nocolon','Expand');page.bundle.addKey('expandCollapse.collapse.section.nocolon','Collapse');page.bundle.addKey('expandCollapse.expand.section.param','Expand {0}');page.bundle.addKey('expandCollapse.collapse.section.param','Collapse {0}');page.bundle.addKey('tool.activity.description','activity updates');page.bundle.addKey('accessDeniedMsg','Access Denied');page.bundle.addKey('breadcrumbs.expand','Click to expand the breadcrumbs');</script>
+<script type="text/javascript">
+    FastInit.addOnLoad( function()
+    {
+      
+    });
+    
+</script>
+<script type="text/javascript">
+   var course_id = "_269718_1";
+   var courseTitle = "UFCFM6-15-3 - Requirements engineering 16sep_1";
+   var confirmDeleteMenuItemMsg = "Are you sure you want to delete this item?";
+   var confirmQuickUnenrollMsg = "Any user data created while quick-enrolled in this course will be deleted. Proceed?";
+   var confirmQuickEnrollMsg = "You will be given the role: Instructor. Proceed?";
+   var inNewWindow = false;
+   var theCourseMenu;
+ </script>
+<script type="text/javascript">globalNavigation.init(); Event.observe(window, 'resize', globalNavigation.onResize);</script>
+<script type="text/javascript">
+    page.bundle.addKey('globalnav.menu.expand','Expand\x20Global\x20Nav');
+    page.bundle.addKey('globalnav.menu.collapse','Collapse\x20Global\x20Nav');
+  </script>
+<script type="text/javascript">
+	
+		function loadClock() 
+		{
+		  uweJQ.getJSON("/webapps/portal/time.jsp", function(json) {
+					var servertime = parseFloat(uweJQ(json.time).val());
+					var serverDate = new Date(servertime);
+					uweJQ("span#timedate").clock({"timestamp":serverDate.getTime(),"format":"24"});
+					uweJQ("span#timezone").append(" UK Time");
+		  });
+		}
+		
+		uweJQ(document).ready(loadClock);
+
+	   </script>
+<script type="text/javascript">
+    page.bundle.addKey('quick_links.link.title','Navigate\x20to\x20element\x20\x7B1\x7D\x20of\x20type\x20\x7B2\x7D\x20in\x20\x7B0\x7D\x20frame');
+    page.bundle.addKey('quick_links.lightbox_title','Quick\x20Links');
+    page.bundle.addKey('quick_links.link_title','Open\x20Quick\x20Links');
+    page.bundle.addKey('quick_links.hotkey.shift','Shift');
+    page.bundle.addKey('quick_links.hotkey.control','Ctrl');
+    page.bundle.addKey('quick_links.hotkey.alt','Alt');
+    page.bundle.addKey('quick_links.hotkey.combination_divider','\x2B');
+  </script>
+<script type="text/javascript">quickLinks.initialize( [ '' ] );</script>
+<script type="text/javascript">
+            globalNavMenu.init( true );
+          </script>
+<script type="text/javascript"> social.Profile.MY_PROFILE_TOOL_ID='BB-CORE_____myProfile'; social.Profile.MY_PROFILE_TOOL_URI='/webapps/bb-social-learning-bb_bb60/execute/mybb?cmd=display&toolId=BB-CORE_____myProfile&location='; </script>
+<script type="text/javascript">
+   FastInit.addOnLoad( function()
+   {
+            if ( window.DWREngine )
+       {
+        try {DWREngine.beginBatch();} catch(ignore) {}
+       } 
+                page.decoratePageBanner();
+                                                             page.ContextMenu.hideMenuDiv('4bada5bfff8148059af6a151aed7157b');
+                                                             new page.PageHelpToggler(true, 'Help is On: Click to hide page help.', 'Help is Off: Click to show page help.', false );
+                                                             breadcrumbs.rightMostNavItem = 'announcements_entry';
+                                                             breadcrumbs.rightMostParentURL = '/webapps/blackboard/execute/courseMain?course_id=_269718_1';
+                                                             new page.PageMenuToggler(true,'courseMenuToggle_269718_1', true);
+                                                             courseMenu.nonceKey = 'blackboard.platform.security.NonceUtil.nonce.ajax';
+                                                             courseMenu.nonceValue = 'da95529b-e129-49be-b87d-47cd02899930';
+                                                             new page.PaletteController('courseMenuPalette', 'courseMenu_link', false, false);
+                                                             theCourseMenu = new courseMenu.CourseMenu('/webapps/blackboard/execute/doCourseMenuAction', '/webapps/blackboard/execute/getCourseMenuContextMenu');
+                                                             welcomeOverlay.initOverlay();
+                                                             tool_service.init ('300000', 'Suppress-Session-Timestamp-Update' );
+                                                             if (typeof(initEditors) == 'function') { initEditors(); }; 
+                                                             if (window['org'] && window['org']['owasp']) { org.owasp.esapi.ESAPI.initialize(); }; 
+                                                             quickLinks.createHelper();
+                                                                  if ( window.DWREngine )
+       {
+         try {DWREngine.endBatch();} catch(ignore) {}
+       }
+                          BrowserSpecific.registerListeners();
+               });
+   </script>
+</body></html>

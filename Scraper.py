@@ -37,13 +37,22 @@ password = session.at_xpath('//*[@name="password"]') # Where <input name="passwo
 password.set('vellapushFare19')
 # Push the button
 name.form().submit()
-session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')
 
-session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'))
+# Get Courses page
+#session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')
+#session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'))
+
+# Get Requirements Engineering main page
+#session.visit('https://blackboard.uwe.ac.uk/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_269718_1&handle=announcements_entry&mode=view')
+#session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
+
+# Get Requirement Engineering's Announcements
+session.visit('https://blackboard.uwe.ac.uk/webapps/blackboard/content/launchLink.jsp?course_id=_269718_1&tool_id=_139_1&tool_type=TOOL&mode=view&mode=reset')
 
 #Added comment for testing
 soup = BeautifulSoup(session.body(),'html.parser')
-print(soup)
-file = open('html text.html', 'w')
+print(soup.prettify())
+
+file = open('requirement_engineering_annoucements.html', 'w')
 file.write(str(soup))
 file.close()
