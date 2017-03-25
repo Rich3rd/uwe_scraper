@@ -19,7 +19,6 @@ blackboardURL = 'https://blackboard.uwe.ac.uk'
 matches1 = ""
 matches = []
 new_matches = []
-temp_match = ""
 
 def getCourses():
     for child in soup.find_all(id='div_186_1'):
@@ -63,8 +62,10 @@ getSubjectAnnouncementsDates()
 
 for each in matches:
     #print(each)
-    temp_match = re.match("Posted on: (?P<date>.*?) o'clock GMT",each)
-    new_matches.append(temp_match.group('date'))
+    print(each)
+    temp_match = re.match("Posted on: (?P<date>.*?) o'clock .*",each)
+    print(temp_match.group('date'))
+    #new_matches.append(temp_match.group('date'))
     #print(each)
 
 #matches1 = datefinder.find_dates(" Tuesday, 6 November 2012 15:00:54 o'clock GMT")
