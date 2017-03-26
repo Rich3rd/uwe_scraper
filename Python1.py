@@ -8,6 +8,10 @@ import requests
 import dryscrape
 import re
 
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 htmldoc = open('requirement_engineering_annoucements.html','r')
 soup = BeautifulSoup(htmldoc,'html.parser')
 
@@ -63,11 +67,25 @@ def processAnnounceDates():
         for each in temp:
             announceDates.append(each)
 
+def sendEmail():
+    fromaddr = "uwe.notify@gmail.com"
+    toaddr = "richard_xf95@hotmail.com"
+    msg = MIMEMultipart()
+    msg['From'] = fromaddr
+    msg['To'] = toaddr
+    msg['Subject'] = "TestEmail"
+
+    body = "YOUR MESSAGE HERE"
+    msg.attach(MIMEText(body, 'plain'))
+
+    server = smtplib.SMTP_SSL('smtp.gmail.com')
+    server.login(fromaddr, "richard95")
+    text = msg.as_string()
+    server.sendmail(fromaddr, toaddr, text)
+    server.quit()
 
 #getAnnouncements()
 
 getSubjectAnnouncementsDates()
 processAnnounceDates()
-
-for each in announceDates:
-    print(each)
+sendEmail()

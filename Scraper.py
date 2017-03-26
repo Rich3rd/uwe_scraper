@@ -1,3 +1,14 @@
+# Thanks to
+#
+# datefinder , https://github.com/akoumjian/datefinder
+# Beautiful Soup , https://www.crummy.com/software/BeautifulSoup/
+# capybara-webkit , https://github.com/thoughtbot/capybara-webkit
+# dryscrape , https://github.com/niklasb/dryscrape
+#
+# Richard Ng , 2017
+
+
+
 from bs4 import BeautifulSoup
 import urllib.request
 import base64
@@ -27,7 +38,6 @@ payload = {
             }
 
 
-#session = requests.post('https://blackboard.uwe.ac.uk/webapps/login/',data=payload)
 
 session = dryscrape.Session();
 session.visit('https://blackboard.uwe.ac.uk/webapps/login/')
@@ -49,7 +59,6 @@ name.form().submit()
 # Get Requirement Engineering's Announcements
 session.visit('https://blackboard.uwe.ac.uk/webapps/blackboard/content/launchLink.jsp?course_id=_269718_1&tool_id=_139_1&tool_type=TOOL&mode=view&mode=reset')
 
-#Added comment for testing
 soup = BeautifulSoup(session.body(),'html.parser')
 print(soup.prettify())
 
