@@ -17,7 +17,9 @@ soup = BeautifulSoup(htmldoc,'html.parser')
 
 courses = {}
 subjectCategory = {}
-subjectAnnounce = {}
+subjectAnnouncements = {}
+subjectAnnouncementBody = []
+selectAnnouncements = 0
 
 fullAnnounceDates = []
 announceDates = []
@@ -41,12 +43,18 @@ def getSubjectCategory():
 
 def getAnnouncements():
     for child in soup.find_all(id='announcementList'):
-        for child1 in child.find_all('li'):
-            print(child1.find('h3').string)
-            print(child1.find('span').string)
+        for child1 in child.find_all('li',class_="clearfix"):
+            #print(child1.find('h3').string) #Annnouncement title
+            title = child1.find('h3').string.strip(' \t\n\r')
+            temp = (child1.find('span').string).strip(' \t\n\r') #Announcement time and date
             for child2 in child1.find_all(class_='vtbegenerated'):
                 for child3 in child2.find_all('p'):
-                    print(child3.string)
+                    #print(temp)
+                    if(type(child3.string) is not type(None)):
+                        temp = temp + ((child3.string).strip(' \t\n\r')) #Announcement body
+                subjectAnnouncements[title] = temp;
+
+
 
 def getSubjectAnnouncementsDates():
     for child in soup.find_all(id='announcementList'):
@@ -67,15 +75,27 @@ def processAnnounceDates():
         for each in temp:
             announceDates.append(each)
 
-def sendEmail():
+def compareDates():
+    global selectAnnouncements
+    datetimeTemp = datefinder.find_dates("2-1-2016") #date from database
+    for each in datetimeTemp:
+        previousScrapeDate = each    #get the datetime to a variable
+    print(previousScrapeDate)
+    for each in announceDates:
+        print(each)
+        if (each >= previousScrapeDate): #new announcement
+            selectAnnouncements += 1
+
+
+def sendEmail(receiverAddress,emailSubject,emailBody):
     fromaddr = "uwe.notify@gmail.com"
-    toaddr = "richard_xf95@hotmail.com"
+    toaddr = receiverAddress
     msg = MIMEMultipart()
     msg['From'] = fromaddr
     msg['To'] = toaddr
-    msg['Subject'] = "TestEmail"
+    msg['Subject'] = emailSubject
 
-    body = "YOUR MESSAGE HERE"
+    body = emailBody
     msg.attach(MIMEText(body, 'plain'))
 
     server = smtplib.SMTP_SSL('smtp.gmail.com')
@@ -86,6 +106,14 @@ def sendEmail():
 
 #getAnnouncements()
 
+#getSubjectAnnouncementsDates()
+#processAnnounceDates()
+#getAnnouncements()
+#print(subjectAnnouncements)
 getSubjectAnnouncementsDates()
 processAnnounceDates()
-sendEmail()
+compareDates()
+getAnnouncements()
+
+print(next (iter (subjectAnnouncements.values())))
+#sendEmail("richard_xf95@hotmail.com",)
