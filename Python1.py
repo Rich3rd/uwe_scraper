@@ -7,6 +7,8 @@ import string
 import requests
 import dryscrape
 import re
+import collections
+import types
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -17,7 +19,7 @@ soup = BeautifulSoup(htmldoc,'html.parser')
 
 courses = {}
 subjectCategory = {}
-subjectAnnouncements = {}
+subjectAnnouncements = collections.OrderedDict()
 subjectAnnouncementBody = []
 selectAnnouncements = 0
 
@@ -75,6 +77,14 @@ def processAnnounceDates():
         for each in temp:
             announceDates.append(each)
 
+def combineStringsFromList(input):
+    if (type(temp3) is list):
+        temp = " "
+        for each in input:
+            temp = temp + str(each)
+        return temp
+    return
+
 def compareDates():
     global selectAnnouncements
     datetimeTemp = datefinder.find_dates("2-1-2016") #date from database
@@ -82,7 +92,6 @@ def compareDates():
         previousScrapeDate = each    #get the datetime to a variable
     print(previousScrapeDate)
     for each in announceDates:
-        print(each)
         if (each >= previousScrapeDate): #new announcement
             selectAnnouncements += 1
 
@@ -104,16 +113,15 @@ def sendEmail(receiverAddress,emailSubject,emailBody):
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
-#getAnnouncements()
 
-#getSubjectAnnouncementsDates()
-#processAnnounceDates()
-#getAnnouncements()
-#print(subjectAnnouncements)
 getSubjectAnnouncementsDates()
 processAnnounceDates()
 compareDates()
 getAnnouncements()
+temp3 = list(subjectAnnouncements.items())[:3]
 
-print(next (iter (subjectAnnouncements.values())))
+temp2 = combineStringsFromList(temp3)
+print(str(temp2))
+
+#print(list(subjectAnnouncements.items())[:3])
 #sendEmail("richard_xf95@hotmail.com",)
