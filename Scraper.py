@@ -64,8 +64,11 @@ def getSubjectCategory(session, link):
     return subjectCategory
 
 # Get announcements in Subject pages
-def getAnnouncements(session):
+def getAnnouncements(session, link):
+
     subjectAnnouncements = collections.OrderedDict() # ordered dictionary
+
+    session.visit(link)
     soup = BeautifulSoup(session.body(), 'html.parser')
 
     for child in soup.find_all(id='announcementList'):
@@ -81,9 +84,13 @@ def getAnnouncements(session):
 
 
 # Get announcement dates ONLY
-def getSubjectAnnouncementsDates(session):
+def getSubjectAnnouncementsDates(session, link):
+
     fullAnnounceDates = [] # array to store announcement dates
+
+    session.visit(link)
     soup = BeautifulSoup(session.body(), 'html.parser')
+
     for child in soup.find_all(id='announcementList'):
         for child1 in child.find_all('li'):
             if(child1.find(text = re.compile("Posted on.*?"))):
@@ -92,7 +99,9 @@ def getSubjectAnnouncementsDates(session):
 
 # Further process the dates to only have date, and convert to DateTime format
 def processAnnounceDates(array_FullAnnounceDates):
+
     announceDates = [] # array to store processed announcement dates
+
     for each in array_FullAnnounceDates:
         temp = re.match("Posted on: (?P<date>.*?) o'clock .*",each)
         #print(temp.group('date'))
@@ -123,26 +132,34 @@ def sendEmail(receiverAddress,emailSubject,emailBody):
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
-def getValueInDict(dict_input):
+def getValueInDict(dict_input,input_selection):
     loopnum = 0  # reset loop count
     temp_string = ""
 
     for each, value in dict_input.items():
-        if loopnum == selection:
+        if loopnum == input_selection:
             temp_string = value
         loopnum = loopnum + 1
     return temp_string
 
+def compareDates(input_listOfDates, input_date):
+    selectAnnouncements = 0
+    datetimeTemp = datefinder.find_dates(input_date) #date from database
+    for each in datetimeTemp:
+        previousScrapeDate = each    #get the datetime to a variable
+    for each in input_listOfDates:
+        if (each >= previousScrapeDate): #new announcement
+            selectAnnouncements += 1
+    return selectAnnouncements
 
-# Get Requirements Engineering main page
-#session.visit('https://blackboard.uwe.ac.uk/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_269718_1&handle=announcements_entry&mode=view')
-#session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
+username = 'n2-terjing'
+password = 'vellapushFare19'
 
-# Get Requirement Engineering's Announcements
-#session.visit('https://blackboard.uwe.ac.uk/webapps/blackboard/content/launchLink.jsp?course_id=_269718_1&tool_id=_139_1&tool_type=TOOL&mode=view&mode=reset')
+#username = str(input("Enter UWE Blackboard username: "))
+#password = str(input("Enter UWE Blackboard password: "))
 
 
-currentSession = login('n2-terjing','vellapushFare19') # login and get session
+currentSession = login(username,password) # login and get session
 
 orderedDict_Subjects = getSubjects(currentSession) # get all subjects
 
@@ -153,24 +170,56 @@ for each in orderedDict_Subjects:
     print([[[num]]],each)
 
 
-#selection = input("enter number:") #enter which subject would like to access
-selection = 4
+selection = input("enter number:") #enter which subject would like to access
+#selection = 4
 
 # Get the subject name link
-selectedSubjectLink = getValueInDict(orderedDict_Subjects)
-
+selectedSubjectLink = getValueInDict(orderedDict_Subjects,int(selection)-1)
 
 orderedDict_SubjectCategory = getSubjectCategory(currentSession,appendBlackboardPrefix(selectedSubjectLink))
 
-selection = 1 #supposed to have selection, but can only process announcements now
+num = 0
+for each in orderedDict_SubjectCategory:
+    num = num + 1
+    print([[[num]]],each)
+
+#Get the link for Announcements
+loopnum = 0
+for each , value in orderedDict_SubjectCategory.items():
+    if (str(each) == "Announcements"):
+        selection = loopnum
+    loopnum = loopnum + 1
+
+print('Selected number: ' ,selection+1)
+#selection = 0 #supposed to have selection, but can only process announcements now
 
 # Get selected subject navigation bar link
-selectedCategoryLink = getValueInDict(orderedDict_SubjectCategory)
+selectedCategoryLink = getValueInDict(orderedDict_SubjectCategory,int(selection))
 
-# Get announcements
-orderedDict_announcements = getAnnouncements(currentSession)
+# Get all announcements
+orderedDict_announcements = getAnnouncements(currentSession,appendBlackboardPrefix(selectedCategoryLink))
 
+# Get announcement dates ONLY
+list_announcementDates_full = getSubjectAnnouncementsDates(currentSession,appendBlackboardPrefix(selectedCategoryLink))
 
+# get Dates only, and convert to DateTime
+list_announcementDates_short = processAnnounceDates(list_announcementDates_full)
 
+input_date = input("Enter a date to compare against: ")
+#input_date = '1 January 2017'
 
+#compare dates against entered date
+numberOfAnnouncements = compareDates(list_announcementDates_short,input_date)
+
+print('Found',numberOfAnnouncements, 'announcements' )
+listOfFinalAnnouncements = list(orderedDict_announcements.items())[:numberOfAnnouncements] #get the number of announcement entries
+
+#joining the list together into string
+stringOfFinalAnnouncements = '\n'.join(map(str, listOfFinalAnnouncements))
+
+input_email = input("Enter email to be sent to: ")
+#input_email = "richard_xf95@hotmail.com"
+
+#sending email to user
+sendEmail(str(input_email),"uwe-notify!",stringOfFinalAnnouncements)
 
