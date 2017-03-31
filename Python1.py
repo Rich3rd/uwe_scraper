@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import datefinder
 import urllib.request
-import base64
 import string
 import requests
 import dryscrape
@@ -48,7 +47,7 @@ def getAnnouncements():
         for child1 in child.find_all('li',class_="clearfix"):
             #print(child1.find('h3').string) #Annnouncement title
             title = child1.find('h3').string.strip(' \t\n\r')
-            temp = (child1.find('span').string).strip(' \t\n\r') #Announcement time and date
+            temp = (child1.find('span').string).strip(' \t\n\r') + "  " #Announcement time and date
             for child2 in child1.find_all(class_='vtbegenerated'):
                 for child3 in child2.find_all('p'):
                     #print(temp)
@@ -78,7 +77,7 @@ def processAnnounceDates():
             announceDates.append(each)
 
 def combineStringsFromList(input):
-    if (type(temp3) is list):
+    if (type(input) is list):
         temp = " "
         for each in input:
             temp = temp + str(each)
@@ -118,10 +117,14 @@ getSubjectAnnouncementsDates()
 processAnnounceDates()
 compareDates()
 getAnnouncements()
-temp3 = list(subjectAnnouncements.items())[:3]
 
-temp2 = combineStringsFromList(temp3)
-print(str(temp2))
+listOfFinalAnnouncements = list(subjectAnnouncements.items())[:3] #get the number of announcement entries
+#stringOfFinalAnnouncements = combineStringsFromList(listOfFinalAnnouncements)
+
+#print(stringOfFinalAnnouncements)
 
 #print(list(subjectAnnouncements.items())[:3])
-#sendEmail("richard_xf95@hotmail.com",)
+
+stringOfFinalAnnouncements = '\n'.join(map(str, listOfFinalAnnouncements))
+print(stringOfFinalAnnouncements)
+sendEmail("richard_xf95@hotmail.com","uwe-notify!",stringOfFinalAnnouncements)
