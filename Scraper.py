@@ -51,8 +51,10 @@ def getSubjects(session):
     return courses
 
 # Get name and link of navigation bar contents in subjects page
-def getSubjectCategory(session):
+def getSubjectCategory(session, link):
     subjectCategory = collections.OrderedDict() #map to store subject navigation bar contents
+    session.visit(link)
+    session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
     soup = BeautifulSoup(session.body(), 'html.parser')
 
     for child in soup.find_all(id='courseMenuPalette_contents'):
@@ -65,6 +67,7 @@ def getSubjectCategory(session):
 def getAnnouncements(session):
     subjectAnnouncements = collections.OrderedDict() # ordered dictionary
     soup = BeautifulSoup(session.body(), 'html.parser')
+
     for child in soup.find_all(id='announcementList'):
         for child1 in child.find_all('li',class_="clearfix"):
             title = child1.find('h3').string.strip(' \t\n\r')   #Announcement title
@@ -87,11 +90,6 @@ def getSubjectAnnouncementsDates(session):
                 fullAnnounceDates.append(child1.find(text = re.compile("Posted on.*?")))
     return fullAnnounceDates
 
-
-# Append a Blackboard prefix to a string
-def appendBlackboardPrefix(inputString):
-    return 'https://blackboard.uwe.ac.uk' + inputString
-
 # Further process the dates to only have date, and convert to DateTime format
 def processAnnounceDates(array_FullAnnounceDates):
     announceDates = [] # array to store processed announcement dates
@@ -102,6 +100,10 @@ def processAnnounceDates(array_FullAnnounceDates):
         for each in temp:
             announceDates.append(each)
     return announceDates
+
+# Append a Blackboard prefix to a string
+def appendBlackboardPrefix(inputString):
+    return 'https://blackboard.uwe.ac.uk'+str(inputString).strip(' \t\n\r')
 
 #send emails to user, from http://naelshiab.com/tutorial-send-email-python/
 def sendEmail(receiverAddress,emailSubject,emailBody):
@@ -121,7 +123,15 @@ def sendEmail(receiverAddress,emailSubject,emailBody):
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
+def getValueInDict(dict_input):
+    loopnum = 0  # reset loop count
+    temp_string = ""
 
+    for each, value in dict_input.items():
+        if loopnum == selection:
+            temp_string = value
+        loopnum = loopnum + 1
+    return temp_string
 
 
 # Get Requirements Engineering main page
@@ -136,6 +146,7 @@ currentSession = login('n2-terjing','vellapushFare19') # login and get session
 
 orderedDict_Subjects = getSubjects(currentSession) # get all subjects
 
+#print all the subjects out for user to select
 num = 0
 for each in orderedDict_Subjects:
     num = num + 1
@@ -143,11 +154,23 @@ for each in orderedDict_Subjects:
 
 
 #selection = input("enter number:") #enter which subject would like to access
-selection = 1
+selection = 4
 
-for each in orderedDict_Subjects:
+# Get the subject name link
+selectedSubjectLink = getValueInDict(orderedDict_Subjects)
 
 
-#orderedDict_SubjectCategory = getSubjectCategory(currentSession) # Get subject's nav bar
+orderedDict_SubjectCategory = getSubjectCategory(currentSession,appendBlackboardPrefix(selectedSubjectLink))
+
+selection = 1 #supposed to have selection, but can only process announcements now
+
+# Get selected subject navigation bar link
+selectedCategoryLink = getValueInDict(orderedDict_SubjectCategory)
+
+# Get announcements
+orderedDict_announcements = getAnnouncements(currentSession)
+
+
+
 
 
