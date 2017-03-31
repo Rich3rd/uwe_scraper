@@ -152,15 +152,17 @@ def compareDates(input_listOfDates, input_date):
             selectAnnouncements += 1
     return selectAnnouncements
 
-username = 'n2-terjing'
-password = 'vellapushFare19'
+#username = 'n2-terjing'
+#password = 'vellapushFare19'
 
-#username = str(input("Enter UWE Blackboard username: "))
-#password = str(input("Enter UWE Blackboard password: "))
+username = str(input("Enter UWE Blackboard username: "))
+password = str(input("Enter UWE Blackboard password: "))
 
-
+print("Logging in.......")
 currentSession = login(username,password) # login and get session
 
+print("\n\nLogged in!")
+print ("\n\n Subject list")
 orderedDict_Subjects = getSubjects(currentSession) # get all subjects
 
 #print all the subjects out for user to select
@@ -170,7 +172,7 @@ for each in orderedDict_Subjects:
     print([[[num]]],each)
 
 
-selection = input("enter number:") #enter which subject would like to access
+selection = input("\nEnter number which corresponds to subject:") #enter which subject would like to access
 #selection = 4
 
 # Get the subject name link
@@ -205,21 +207,23 @@ list_announcementDates_full = getSubjectAnnouncementsDates(currentSession,append
 # get Dates only, and convert to DateTime
 list_announcementDates_short = processAnnounceDates(list_announcementDates_full)
 
-input_date = input("Enter a date to compare against: ")
+input_date = input("\nEnter a date to compare against: ")
 #input_date = '1 January 2017'
 
 #compare dates against entered date
 numberOfAnnouncements = compareDates(list_announcementDates_short,input_date)
 
-print('Found',numberOfAnnouncements, 'announcements' )
+print('\nFound',numberOfAnnouncements, 'announcements' )
 listOfFinalAnnouncements = list(orderedDict_announcements.items())[:numberOfAnnouncements] #get the number of announcement entries
 
 #joining the list together into string
 stringOfFinalAnnouncements = '\n'.join(map(str, listOfFinalAnnouncements))
 
-input_email = input("Enter email to be sent to: ")
+input_email = input("\nEnter email to be sent to: ")
 #input_email = "richard_xf95@hotmail.com"
 
 #sending email to user
 sendEmail(str(input_email),"uwe-notify!",stringOfFinalAnnouncements)
+
+print('Email sent!')
 
