@@ -155,8 +155,6 @@ def compareDates(input_listOfDates, input_date):
             selectAnnouncements += 1
     return selectAnnouncements
 
-#username = 'n2-terjing'
-#password = 'vellapushFare19'
 
 username = str(input("Enter UWE Blackboard username: "))
 password = str(input("Enter UWE Blackboard password: "))
