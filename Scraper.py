@@ -4,8 +4,12 @@
 # Beautiful Soup , https://www.crummy.com/software/BeautifulSoup/
 # capybara-webkit , https://github.com/thoughtbot/capybara-webkit
 # dryscrape , https://github.com/niklasb/dryscrape
+# SSL email snippet , http://naelshiab.com/tutorial-send-email-python/
 #
-# Richard Ng , 2017
+# Ter Jing Ng - 14033542
+# UWE Computing Project
+# Works for UWE Blackboard only
+# 2017
 
 
 
@@ -14,7 +18,6 @@ import dryscrape
 import re
 import collections
 import datefinder
-import pprint
 
 # email imports
 import smtplib
