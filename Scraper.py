@@ -155,76 +155,78 @@ def compareDates(input_listOfDates, input_date):
             selectAnnouncements += 1
     return selectAnnouncements
 
+def main():
+    username = str(input("Enter UWE Blackboard username: "))
+    password = str(input("Enter UWE Blackboard password: "))
 
-username = str(input("Enter UWE Blackboard username: "))
-password = str(input("Enter UWE Blackboard password: "))
+    print("Logging in.......")
+    currentSession = login(username,password) # login and get session
 
-print("Logging in.......")
-currentSession = login(username,password) # login and get session
+    print("\n\nLogged in!")
+    print ("\n\n Subject list")
+    orderedDict_Subjects = getSubjects(currentSession) # get all subjects
 
-print("\n\nLogged in!")
-print ("\n\n Subject list")
-orderedDict_Subjects = getSubjects(currentSession) # get all subjects
-
-#print all the subjects out for user to select
-num = 0
-for each in orderedDict_Subjects:
-    num = num + 1
-    print([[[num]]],each)
+    #print all the subjects out for user to select
+    num = 0
+    for each in orderedDict_Subjects:
+        num = num + 1
+        print([[[num]]],each)
 
 
-selection = input("\nEnter number which corresponds to subject:") #enter which subject would like to access
-#selection = 4
+    selection = input("\nEnter number which corresponds to subject:") #enter which subject would like to access
+    #selection = 4
 
-# Get the subject name link
-selectedSubjectLink = getValueInDict(orderedDict_Subjects,int(selection)-1)
+    # Get the subject name link
+    selectedSubjectLink = getValueInDict(orderedDict_Subjects,int(selection)-1)
 
-orderedDict_SubjectCategory = getSubjectCategory(currentSession,appendBlackboardPrefix(selectedSubjectLink))
+    orderedDict_SubjectCategory = getSubjectCategory(currentSession,appendBlackboardPrefix(selectedSubjectLink))
 
-num = 0
-for each in orderedDict_SubjectCategory:
-    num = num + 1
-    print([[[num]]],each)
+    num = 0
+    for each in orderedDict_SubjectCategory:
+        num = num + 1
+        print([[[num]]],each)
 
-#Get the link for Announcements
-loopnum = 0
-for each , value in orderedDict_SubjectCategory.items():
-    if (str(each) == "Announcements"):
-        selection = loopnum
-    loopnum = loopnum + 1
+    #Get the link for Announcements
+    loopnum = 0
+    for each , value in orderedDict_SubjectCategory.items():
+        if (str(each) == "Announcements"):
+            selection = loopnum
+        loopnum = loopnum + 1
 
-print('Selected number: ' ,selection+1)
-#selection = 0 #supposed to have selection, but can only process announcements now
+    print('Selected number: ' ,selection+1)
+    #selection = 0 #supposed to have selection, but can only process announcements now
 
-# Get selected subject navigation bar link
-selectedCategoryLink = getValueInDict(orderedDict_SubjectCategory,int(selection))
+    # Get selected subject navigation bar link
+    selectedCategoryLink = getValueInDict(orderedDict_SubjectCategory,int(selection))
 
-# Get all announcements
-orderedDict_announcements = getAnnouncements(currentSession,appendBlackboardPrefix(selectedCategoryLink))
+    # Get all announcements
+    orderedDict_announcements = getAnnouncements(currentSession,appendBlackboardPrefix(selectedCategoryLink))
 
-# Get announcement dates ONLY
-list_announcementDates_full = getSubjectAnnouncementsDates(currentSession,appendBlackboardPrefix(selectedCategoryLink))
+    # Get announcement dates ONLY
+    list_announcementDates_full = getSubjectAnnouncementsDates(currentSession,appendBlackboardPrefix(selectedCategoryLink))
 
-# get Dates only, and convert to DateTime
-list_announcementDates_short = processAnnounceDates(list_announcementDates_full)
+    # get Dates only, and convert to DateTime
+    list_announcementDates_short = processAnnounceDates(list_announcementDates_full)
 
-input_date = input("\nEnter a date to compare against: ")
-#input_date = '1 January 2017'
+    input_date = input("\nEnter a date to compare against: ")
+    #input_date = '1 January 2017'
 
-#compare dates against entered date
-numberOfAnnouncements = compareDates(list_announcementDates_short,input_date)
+    #compare dates against entered date
+    numberOfAnnouncements = compareDates(list_announcementDates_short,input_date)
 
-print('\nFound',numberOfAnnouncements, 'announcements' )
-listOfFinalAnnouncements = list(orderedDict_announcements.items())[:numberOfAnnouncements] #get the number of announcement entries
+    print('\nFound',numberOfAnnouncements, 'announcements' )
+    listOfFinalAnnouncements = list(orderedDict_announcements.items())[:numberOfAnnouncements] #get the number of announcement entries
 
-#joining the list together into string
-stringOfFinalAnnouncements = '\n'.join(map(str, listOfFinalAnnouncements))
+    #joining the list together into string
+    stringOfFinalAnnouncements = '\n'.join(map(str, listOfFinalAnnouncements))
 
-input_email = input("\nEnter email to be sent to: ")
-#input_email = "richard_xf95@hotmail.com"
+    input_email = input("\nEnter email to be sent to: ")
+    #input_email = "richard_xf95@hotmail.com"
 
-#sending email to user
-sendEmail(str(input_email),"uwe-notify!",stringOfFinalAnnouncements)
+    #sending email to user
+    sendEmail(str(input_email),"uwe-notify!",stringOfFinalAnnouncements)
 
-print('Email sent!')
+    print('Email sent!')
 
+if __name__ == '__main__':
+    main()
