@@ -4,7 +4,7 @@ from Scraper import login
 
 class TestCases(unittest.TestCase):
     def test_login(self):
-       session = login('2', 'pssword')
+       session = login('n2-terjing', 'vellapushFare19')
        self.assertIsNotNone(session, 'ITS NOT NULL')
 
 

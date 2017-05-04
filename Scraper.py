@@ -36,7 +36,16 @@ def login(usernameInput,passwordInput):
     password = session.at_xpath('//*[@name="password"]')  # Where <input name="password">
     password.set(passwordInput)
     name.form().submit() # Push the button
+
+    try:
+        session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')  # Visit the 'Courses' page
+        session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'), timeout=10)
+    except:
+        print("Login failed")
+        session = None
+
     return session
+
 
 # Get courses names and links in Blackboard main page
 def getSubjects(session):
