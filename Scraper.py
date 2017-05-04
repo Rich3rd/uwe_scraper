@@ -18,6 +18,7 @@ import dryscrape
 import re
 import collections
 import datefinder
+import getpass
 
 # email imports
 import smtplib
@@ -49,8 +50,14 @@ def login(usernameInput,passwordInput):
 
 # Get courses names and links in Blackboard main page
 def getSubjects(session):
-    session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1') # Visit the 'Courses' page
-    session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'))
+    try:
+        session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')  # Visit the 'Courses' page
+        session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'), timeout=10)
+    except:
+        print("Failed to obtain subjects\n")
+        print("Program terminating")
+        exit()
+
     soup = BeautifulSoup(session.body(), 'html.parser')
 
     courses = collections.OrderedDict()    #Temp map to put courses and its links
@@ -65,8 +72,14 @@ def getSubjects(session):
 # Get name and link of navigation bar contents in subjects page
 def getSubjectCategory(session, link):
     subjectCategory = collections.OrderedDict() #map to store subject navigation bar contents
-    session.visit(link)
-    session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
+    try:
+        session.visit(link)
+        session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
+    except:
+        print("Failed to obtain subject categories")
+        print("Program terminating")
+        exit()
+
     soup = BeautifulSoup(session.body(), 'html.parser')
 
     for child in soup.find_all(id='courseMenuPalette_contents'):
@@ -166,7 +179,7 @@ def compareDates(input_listOfDates, input_date):
 
 def main():
     username = str(input("Enter UWE Blackboard username: "))
-    password = str(input("Enter UWE Blackboard password: "))
+    password = getpass.getpass(prompt='Enter UWE Blackboard password: ')
 
     print("Logging in.......")
     currentSession = login(username,password) # login and get session
