@@ -41,7 +41,7 @@ def login(usernameInput,passwordInput):
     try:
         session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')  # Visit the 'Courses' page
         session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'), timeout=10)
-    except:
+    except: # If timeout exit program
         print("Login failed")
         session = None
 
@@ -53,7 +53,7 @@ def getSubjects(session):
     try:
         session.visit('https://blackboard.uwe.ac.uk/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1')  # Visit the 'Courses' page
         session.wait_for(lambda: session.at_xpath('//*[@id="_186_1termCourses_noterm"]/ul'), timeout=10)
-    except:
+    except: #If timeout exit program
         print("Failed to obtain subjects\n")
         print("Program terminating")
         exit()
@@ -75,7 +75,7 @@ def getSubjectCategory(session, link):
     try:
         session.visit(link)
         session.wait_for(lambda: session.at_xpath('//*[@id="courseMenuPalette_contents"]'))
-    except:
+    except: #if timeout then exit program
         print("Failed to obtain subject categories")
         print("Program terminating")
         exit()
