@@ -1,8 +1,8 @@
 # uwe_scraper
-A simple web scraper built to scrape subject announcements from UWE Blackboard.
-Built using Python 3.
-Test pages are included for demonstration and testing purposes.
-Unit tests is available for 'login' method.
+A simple web scraper built to scrape subject announcements from UWE Blackboard.<br />
+Built using Python 3.<br />
+Test pages are included for demonstration and testing purposes.<br />
+Unit tests is available for 'login' method.<br />
 
 Current features:
 - Could email announcements acquired to any email address entered.
